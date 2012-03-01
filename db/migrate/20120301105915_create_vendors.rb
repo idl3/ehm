@@ -3,6 +3,7 @@ class CreateVendors < ActiveRecord::Migration
     create_table :vendors do |t|
       t.string :username
       t.string :name
+      t.string :email
 
       t.timestamps
     end
