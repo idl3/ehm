@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Deals</title>
+  <title>admin</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,20 +11,18 @@
 <div id="navbar">
   <div class="container">
     <div id="logo">
-     
+      <img src="images/logo.png" />
     </div>
     <ul class="nav">
-     
+     huhu ADMIN
     </ul>
   </div>
 </div>
 
 <div class="container">
   <%= yield %>
-  <br />
-  <%= debug(params) %>
 </div>
-
+<%= debug(params) %>
 
 </body>
 </html>

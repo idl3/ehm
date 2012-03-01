@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  background: #E8E8F0;
+  font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#navbar {
+  height: 35px;
+  background: #182945;
+  color: white;
+  margin-bottom: 1em;
+  padding-top:15px;
+}
+
+.container {
+  width:90%;
+  max-width:60em;
+  margin: 0 auto;
+}
+
+#logo { float:left; }

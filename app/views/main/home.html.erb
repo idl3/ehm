@@ -1,0 +1,9 @@
+<ul>
+<% @offers.each do |offer| %>
+  <li>
+    <%= link_to offer.title, vendor_offer_path(offer, offer.vendor) %>
+    - <%= offer.price %>€<br />
+  <i>από <%= offer.vendor.name %></i>
+</li>
+<% end %>
+</ul>
