@@ -19,3 +19,7 @@ def make_vendors
                  password_confirmation: password)
   end
 end
+
+def make_offers
+  # insert offers
+end
