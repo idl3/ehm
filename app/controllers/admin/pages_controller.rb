@@ -1,5 +1,4 @@
-class Admin::PagesController < ApplicationController
-  include AdminSessionsHelper
+class Admin::PagesController < Admin::AdminController
   layout 'admin'
 
   def index

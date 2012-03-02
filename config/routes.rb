@@ -1,19 +1,17 @@
 Deals::Application.routes.draw do
   root to: "Main#home"
 
-  match '/admin/login', to: 'Admin::Sessions#new'
-
-  resources :vendors do
-    resources :offers
-  end
-
+  match '/vendors/:username' => "Vendors#show" # IS THIS THE WAY TO DO IT?
   match '/admin' => 'Admin::Pages#index'
 
-  namespace :admin do
-    resources :offers, :vendors
-    resources :sessions, only: [:new, :create, :destroy]
+  resources :vendors,  only: [:index, :show] do
+    resources :offers, only: [:index, :show]
   end
 
-  # match '/v/:username' => 'Vendors#show'
-  # resources :vendors, path: 'v' do
+  namespace :admin do
+    match '/login', to: 'Sessions#new'
+    resources :offers
+    resources :vendors, except: :destroy
+    resources :sessions, only: [:new, :create, :destroy]
+  end
 end

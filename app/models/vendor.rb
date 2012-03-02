@@ -12,7 +12,7 @@ class Vendor < ActiveRecord::Base
   has_many :offers, dependent: :destroy
 
   def to_param
-    self.username
+    username
   end
 
   private

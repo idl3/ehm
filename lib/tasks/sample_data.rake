@@ -8,18 +8,22 @@ end
 
 def make_vendors
   10.times do |n|
-    name  = Faker::Name.name
-    email = "example-#{n+1}@railstutorial.org"
+    name  = "Vendor no. #{n+1}"
+    email = "vendor-#{n+1}@app.com"
     username = name.parameterize
-    password  = "password"
-    Vendor.create!(name:   name,
+    password  = "tetete"
+    vendor = Vendor.new(name:   name,
                  email:    email,
                  username: username,
                  password: password,
                  password_confirmation: password)
+
+    10.times do |o|
+      title = Faker::Name.name
+      price = o + 15.50
+      vendor.offers.build(title: title, price: price)
+    end
+    vendor.save!
   end
 end
 
-def make_offers
-  # insert offers
-end
