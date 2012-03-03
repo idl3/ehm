@@ -5,7 +5,7 @@ class Admin::AdminController < ApplicationController
   private
 
   def require_login
-    unless signed_in?
+    unless logged_in?
       flash[:error] = "Please login."
       redirect_to admin_login_url
     end

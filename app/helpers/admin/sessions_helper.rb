@@ -8,7 +8,7 @@ module Admin::SessionsHelper
     @current_user ||= Vendor.find(session[:user_id]) if session[:user_id]
   end
 
-  def signed_in?
+  def logged_in?
     !current_user.nil?
   end
 end

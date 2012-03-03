@@ -12,7 +12,11 @@
   <div class="container">
     <div id="logo"></div>
     <ul class="nav">
-      ADMIN
+      <% if logged_in? %>
+      <%= link_to "Logout", admin_logout_path %>
+      <% else %>
+      <%= link_to "Login", admin_login_path %>
+      <% end %>
     </ul>
   </div>
 </div>
@@ -22,8 +26,10 @@
     <div class="flash <%= key %>"><%= value %></div>
   <% end %>
 
+  <%= "Current user: " + current_user.name if logged_in? %>
   <%= yield %>
   <%= debug(params) %>
+  <%= debug(session) %>
 </div>
 
 

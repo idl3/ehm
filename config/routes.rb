@@ -9,9 +9,11 @@ Deals::Application.routes.draw do
   end
 
   namespace :admin do
-    match '/login', to: 'Sessions#new'
+    match '/login', to:  'Sessions#new'
+    match '/logout', to: 'Sessions#destroy'
+
     resources :offers
-    resources :vendors, except: :destroy
+    resources :vendors,  only: [:edit, :show, :update]
     resources :sessions, only: [:new, :create, :destroy]
   end
 end

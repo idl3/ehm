@@ -13,6 +13,8 @@ body {
   padding-top:15px;
 }
 
+#navbar a { color: grey; }
+
 .container {
   width:90%;
   max-width:60em;
@@ -20,3 +22,5 @@ body {
 }
 
 #logo { float:left; }
+
+.notice { background: red;}
