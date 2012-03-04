@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+$darkblue: #182945;
+
+@mixin containers {
+  width: 90%;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+body {
+  background: #E8E8F0;
+  font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+#navbar {
+  height: 4em;
+  background: $darkblue url(navbar-bg.png) repeat-x;
+
+  .container {
+    @include containers;
+    height: inherit;
+
+  }
+
+  ul, li {
+    display: inline;
+    float: right;
+  }
+}
+
+.container {
+  @include containers;
+  margin-top: 2em;
+}
+
+
+
+#logo { float:left; }
+
+.notice { background: red; }
+

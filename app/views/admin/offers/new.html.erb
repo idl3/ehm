@@ -1,1 +1,14 @@
-new offer
+<h2>New offer</h2>
+
+<%= form_for [:admin, @offer] do |f| %>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %><br /><br />
+
+  <%= f.label :price %><br />
+  <%= f.text_field :price %><br />
+
+  <%= f.label :initial_price %><br />
+  <%= f.text_field :initial_price %><br />
+
+  <%= f.submit "Create" %>
+<% end %>

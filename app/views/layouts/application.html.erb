@@ -2,24 +2,29 @@
 <html>
 <head>
   <title>Deals</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 <div id="navbar">
   <div class="container">
     <div id="logo">
-     
+      <img src="/assets/logo.png" alt="dailydeals" width="122" height="40" />
     </div>
-    <ul class="nav">
-     
+    <ul>
+      <li>Όλες οι προσφορές</li>
+      <li>Ανά είδος</li>
+      <li>Ανά κατάστημα</li>
     </ul>
   </div>
 </div>
 
 <div class="container">
+
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+  <% end %>
   <%= yield %>
   <br />
   <%= debug(params) %>
