@@ -1,13 +1,13 @@
-<h1>Log in</h1>
-
 <%= form_tag admin_sessions_path do %>
   <div class="field">
     <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
   <div class="field">
-    <%= label_tag :password %>
+    <%= label_tag "Κωδικός" %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+  <div class="actions">
+    <%= submit_tag "Σύνδεση", class: "btn" %>
+  </div>
 <% end %>

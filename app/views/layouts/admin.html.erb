@@ -8,48 +8,24 @@
 </head>
 <body>
 
-<div id="navbar">
-  <div class="container">
-    <div id="logo"></div>
-    <ul class="nav">
-      <% if logged_in? %>
-      <%= link_to "Logout", admin_logout_path %>
-      <% else %>
-      <%= link_to "Login", admin_login_path %>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
+<%= render 'admin/shared/navbar' %>
 
 <div class="container">
-<% if @offer %>
-<% if @offer.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@offer.errors.count, "error") %>
-        prohibited this <%= @offer.class.to_s.underscore.humanize.downcase %>
-        from being saved:</h2>
-    <p>There were problems with the following fields:</p>
-    <ul>
-    <% @offer.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
+  <div class="row">
+    <div class="span9">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+
+    <div class="span3">
+      <span><%= "Καλωσήλθες, " + current_user.name if logged_in? %></span>
+    </div>
   </div>
-<% end %>
-<% end %>
-
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-
-  <%= "Current user: " + current_user.name if logged_in? %>
-  <%= yield %>
-  <%= debug(params) %>
-  <%= debug(session) %>
 </div>
 
-
+<%= debug(params) %>
+<%= debug(session) %>
 </body>
 </html>

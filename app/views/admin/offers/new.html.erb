@@ -1,6 +1,7 @@
-<h2>New offer</h2>
 
 <%= form_for [:admin, @offer] do |f| %>
+<%= render 'admin/shared/error_messages', object: f.object %>
+
   <%= f.label :title %><br />
   <%= f.text_field :title %><br /><br />
 

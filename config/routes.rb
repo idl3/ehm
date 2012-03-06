@@ -16,4 +16,6 @@ Deals::Application.routes.draw do
     resources :vendors,  only: [:edit, :show, :update]
     resources :sessions, only: [:new, :create, :destroy]
   end
+
+  match '/admin/:notfound' => 'Admin::Pages#index' # catch-all
 end

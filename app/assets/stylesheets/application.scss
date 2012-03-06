@@ -1,26 +1,11 @@
-body {
-  margin: 0 auto;
-  padding: 0 auto;
-  background: #E8E8F0;
-  font: normal 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree .
+*/
+
+#logo {
+  img { float:left; }
 }
-
-#navbar {
-  height: 35px;
-  background: #182945;
-  color: white;
-  margin-bottom: 1em;
-  padding-top:15px;
-}
-
-#navbar a { color: grey; }
-
-.container {
-  width:90%;
-  max-width:60em;
-  margin: 0 auto;
-}
-
-#logo { float:left; }
-
-.notice { background: red;}

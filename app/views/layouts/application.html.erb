@@ -7,28 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="navbar">
-  <div class="container">
-    <div id="logo">
-      <img src="/assets/logo.png" alt="dailydeals" width="122" height="40" />
-    </div>
-    <ul>
-      <li>Όλες οι προσφορές</li>
-      <li>Ανά είδος</li>
-      <li>Ανά κατάστημα</li>
-    </ul>
-  </div>
-</div>
+
+<%= render 'shared/navbar' %>
 
 <div class="container">
-
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
   <%= yield %>
-  <br />
-  <%= debug(params) %>
 </div>
+
+<%= debug(params) %>
 
 
 </body>

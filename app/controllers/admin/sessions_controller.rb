@@ -1,4 +1,6 @@
 class Admin::SessionsController < ApplicationController
+  layout 'admin'
+
   def new
   end
 
@@ -7,7 +9,8 @@ class Admin::SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       current_user = user
-      redirect_to admin_path, notice: t(:welcome_flash)
+      flash[:success] = t(:welcome_flash)
+      redirect_to admin_path
     else
       flash[:error] = t(:failed_login_flash)
       render 'new'

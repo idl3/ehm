@@ -11,6 +11,7 @@ describe Offer do
   it { should respond_to :price }
   it { should respond_to :initial_price }
   its(:vendor) { should == vendor }
+
   it { should be_valid }
 
   describe "when vendor_id is not present" do

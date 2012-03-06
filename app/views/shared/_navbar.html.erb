@@ -1,0 +1,27 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div id="logo">
+        <img src="/assets/logo.png" alt="dailydeals" width="122" height="40" />
+      </div>
+
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse">
+        <div class="container">
+          <ul class="nav">
+            <li><%= link_to "Επισκόπηση", admin_path %></li>
+            <li><%= link_to "+Νέα προσφορά", new_admin_offer_path %></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
