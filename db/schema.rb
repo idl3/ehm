@@ -29,11 +29,9 @@ ActiveRecord::Schema.define(:version => 20120304190416) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
-    t.string   "remember_token"
   end
 
   add_index "vendors", ["email"], :name => "index_vendors_on_email", :unique => true
-  add_index "vendors", ["remember_token"], :name => "index_vendors_on_remember_token"
   add_index "vendors", ["username"], :name => "index_vendors_on_username", :unique => true
 
 end

@@ -1,7 +1,9 @@
 class Admin::AdminController < ApplicationController
   before_filter :require_login
-  layout 'admin'
+
   include Admin::SessionsHelper
+
+  layout 'admin'
 
   private
 

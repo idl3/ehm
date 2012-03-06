@@ -18,7 +18,8 @@ describe Offer do
     it { should_not be_valid }
   end
 
-  # Title
+  # title
+
   describe "with blank title" do
     before { @offer.title = " " }
     it { should_not be_valid }
@@ -34,7 +35,8 @@ describe Offer do
     it { should_not be_valid }
   end
 
-  # Price
+  # price
+
   describe "with blank price" do
     before { @offer.price = " " }
     it { should_not be_valid }
