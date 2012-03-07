@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe Offer do
   let(:vendor) { FactoryGirl.create(:vendor) }
-  before { @offer = vendor.offers.build(title: "Lorem ipsum", price: 1, initial_price: 123.45) }
+  before { @offer = vendor.offers.build(title: "Lorem ipsum", price: 1, initial_price: 123.45,
+                                          starts_at: Date.today, expires_at: Date.tomorrow ) }
 
   subject { @offer }
 
@@ -21,7 +22,7 @@ describe Offer do
     it { should_not be_valid }
   end
 
-  # title
+  # TITLE
 
   describe "with blank title" do
     before { @offer.title = " " }
@@ -38,7 +39,7 @@ describe Offer do
     it { should_not be_valid }
   end
 
-  # price
+  # PRICES
 
   describe "with blank price" do
     before { @offer.price = " " }
@@ -57,6 +58,28 @@ describe Offer do
 
   describe "when price isn't less than the initial_price" do
     before { @offer.price = 123.45 }
+    it { should_not be_valid }
+  end
+
+  # DATES
+
+  describe "with blank starting date" do
+    before { @offer.starts_at = nil }
+    it { should_not be_valid }
+  end
+
+  describe "with blank expiry date" do
+    before { @offer.expires_at = nil }
+    it { should_not be_valid }
+  end
+
+  describe "with starting date that's in the past" do
+    before { @offer.starts_at = Date.yesterday }
+    it { should_not be_valid }
+  end
+
+  describe "with expiry date same as starting date" do
+    before { @offer.expires_at = @offer.starts_at }
     it { should_not be_valid }
   end
 end

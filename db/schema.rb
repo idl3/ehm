@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(:version => 20120307190930) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.decimal  "initial_price"
-    t.date     "expirs_at"
     t.date     "starts_at"
     t.date     "expires_at"
   end

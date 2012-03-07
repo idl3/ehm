@@ -6,9 +6,4 @@ class Vendor < ActiveRecord::Base
   def to_param
     username
   end
-
-  private
-  def create_remember_token
-    self.remember_token = SecureRandom.urlsafe_base64
-  end
 end

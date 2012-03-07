@@ -6,6 +6,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'jquery-rails'
 gem 'haml'
+gem 'date_validator', '~> 0.6.3'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.8.1'
