@@ -1,11 +1,8 @@
-Vendor Name: <strong><%= @vendor.name %></strong><br />
-Vendor Username: <strong><%= @vendor.username %></strong>
+Vendor: <%= @vendor.name %><br />
+Username: <%= @vendor.username %>
 
 <h3>Offers</h3>
-<ol>
-<% @offers.each do |offer| %>
-<li><%= offer.title %></li>
-<li><%= offer.price %></li>
-<br />
-<% end %>
+<div class="row">
+  <%= render @offers %>
+</div>
 </ol>

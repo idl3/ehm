@@ -4,7 +4,7 @@ class VendorsController < ApplicationController
   end
 
   def show
-    @vendor = Vendor.find_by_username(params[:username])
+    @vendor = Vendor.find_by_username(params[:vendor])
     @offers = @vendor.offers
   end
 end

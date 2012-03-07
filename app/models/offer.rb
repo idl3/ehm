@@ -6,4 +6,6 @@ class Offer < ActiveRecord::Base
   validates :title, presence: true, length: { minimum: 6, maximum: 25 }
   validates :initial_price, presence: true, numericality: true, length: { maximum: 6 }
   validates :price, presence: true, numericality: { less_than: :initial_price }, length: { maximum: 6 }
+
+  default_scope order: 'created_at DESC'
 end
