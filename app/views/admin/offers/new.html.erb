@@ -12,10 +12,10 @@
   <%= f.text_field :initial_price %><br />
 
   <%= f.label "Ξεκινά στις:" %><br />
-  <%= date_select :offer, :starts_at %>
+  <%= date_select :offer, :starts_on %>
 
   <%= f.label "Λήγει στις:" %><br />
-  <%= date_select :offer, :expires_at %>
+  <%= date_select :offer, :expires_on %>
 
   <%= f.submit "Create" %>
 <% end %>

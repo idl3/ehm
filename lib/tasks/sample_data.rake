@@ -30,8 +30,8 @@ def make_offers(qty)
       offer.title = "Offer no.#{n+1}"
       offer.price = 15.50
       offer.initial_price = 16.50
-      offer.starts_at = Date.today + n
-      offer.expires_at = Date.tomorrow + n
+      offer.starts_on = Date.today + n
+      offer.expires_on = Date.tomorrow + n
 
       offer.save!
     end

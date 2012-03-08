@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.limit(20)
+    @offers = Offer.running_now
   end
 
   def show
@@ -9,5 +9,7 @@ class OffersController < ApplicationController
   end
 
   def expiring
+    @offers = Offer.expiring_soon
+    render 'index'
   end
 end
