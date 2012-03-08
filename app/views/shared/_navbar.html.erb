@@ -9,15 +9,13 @@
         <span class="icon-bar"></span>
       </a>
 
-      <div id="logo">
-        <a href="/"><img src="/assets/logo.png" alt="dailydeals" width="122" height="40" /></a>
-      </div>
+      <%= link_to "Daily Deals", admin_path, class: 'brand' %>
 
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse">
         <div class="container">
           <ul class="nav">
-            <li><%= link_to "Αρχική", root_path %></li>
+            <li><%= link_to "Όλες οι προσφορές", root_path %></li>
             <li><%= link_to "xxxxxxx", new_admin_offer_path %></li>
           </ul>
       </div>
