@@ -12,9 +12,6 @@
 //
 // If you'd like to override bootstrap's own variables, you can do so here as well
 // See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
 
 .btn {
   .btn-large;
@@ -22,17 +19,53 @@
 }
 
 @darkBlue: #182945;
+@normalBlue: #1E3458;
+@borderLightGrey: #DADBE4;
 
 @navbarBackground: @darkBlue;
 @navbarBackgroundHighlight: #1E3458;
-@navbarHeight: 60px;
+@navbarHeight: 200px;
 @navbarLinkColor: #ccc;
 @navbarLinkColorHover: white;
 
 body {
   background: #EAEDF6;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 @gridColumns: 4;
 @gridColumnWidth: 80px;
 @gridGutterWidth: 100px;
+
+.navbar { margin-bottom: 30px; }
+.navbar-inner { border-radius: 0; }
+
+.offersnav {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.offersnav .span12 {
+  border-bottom: 1px solid @borderLightGrey;
+  margin-bottom: 13px;
+}
+
+.offersnav .span4 { margin-bottom: 10px; margin-left: 0px; }
+.offersnav .active a { color: @normalBlue; }
+.offersnav a { color: #999;}
+.offersnav a:hover { color: #666; text-decoration:none; }
+
+
+.offer {
+  width: 170px;
+  height: 190px;
+  background: white;
+  margin-bottom: 30px;
+}
+
+.offer-inner {
+  padding:9px;
+  max-height: 174px;
+  height: 174px;
+}
+

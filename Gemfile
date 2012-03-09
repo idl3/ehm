@@ -2,19 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 gem 'sqlite3'
-gem 'bcrypt-ruby', '3.0.1'
-gem 'faker', '1.0.1'
 gem 'jquery-rails'
-gem 'haml'
-gem 'date_validator', '~> 0.6.3'
+gem 'bcrypt-ruby', '3.0.1'
 
-group :test, :development do
-  gem 'rspec-rails', '~> 2.8.1'
-end
+gem 'date_validator', '~> 0.6.3'
+gem 'paperclip', '~> 2.7'
+gem 'will_paginate', '~> 3.0'
 
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '1.4.0'
+  gem 'rspec-rails', '~> 2.8.1'
 end
 
 group :assets do
@@ -24,3 +22,9 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'less'
 end
+
+
+
+# gem 'faker', '1.0.1'
+# gem "rmagick", "~> 2.13.1"
+# gem 'haml'

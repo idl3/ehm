@@ -2,8 +2,8 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     Rake::Task['db:reset'].invoke
-    make_vendors(10)
-    make_offers(5)
+    make_vendors(5)
+    make_offers(10)
 
   end
 end
@@ -30,9 +30,8 @@ def make_offers(qty)
       offer.title = "Offer no.#{n+1}"
       offer.price = 15.50
       offer.initial_price = 16.50
-      offer.starts_on = Date.today + n
-      offer.expires_on = Date.tomorrow + n
-
+      offer.starts_on = Date.current.yesterday
+      offer.expires_on = Date.current + n
       offer.save!
     end
   end

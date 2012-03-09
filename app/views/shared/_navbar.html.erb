@@ -2,24 +2,36 @@
   <div class="navbar-inner">
     <div class="container">
 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
 
-      <%= link_to "Daily Deals", admin_path, class: 'brand' %>
+      <%= link_to "Daily Deals", root_path, class: 'brand' %>
 
-      <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse">
         <div class="container">
           <ul class="nav">
-            <li><%= link_to "Όλες οι προσφορές", root_path %></li>
-            <li><%= link_to "xxxxxxx", new_admin_offer_path %></li>
+            <li class="active">
+              <%= link_to "Όλες οι προσφορές", root_path %>
+            </li>
+
+            <li class="dropdown" id="menu1">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                Ανά κατάστημα
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <% active_vendors.each do |vendor| %>
+                <li><%= link_to vendor.name, vendor %></li>
+                <% end %>
+              </ul>
+            </li>
           </ul>
+        </div>
       </div>
-      </div>
+
     </div>
   </div>
 </div>
