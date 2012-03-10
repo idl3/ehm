@@ -1,0 +1,11 @@
+<ul class="nav nav-pills nav-stacked">
+  <li <%= raw 'class="active"' if current_page?(root_path) %>>
+    <%= link_to "Όλες οι κατηγορίες", root_path %>
+  </li>
+
+  <% all_categories.each do |category| %>
+  <li <%= raw 'class="active"' if active?(category) %>>
+    <%= link_to category.title, category %>
+  </li>
+  <% end %>
+</ul>
