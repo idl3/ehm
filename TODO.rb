@@ -15,3 +15,5 @@ class Category < ActiveRecord::Base
 end
 
 # think: ASSIGN CITIES TO VENDORS AND REFINE-BY CITIES?
+
+# When all Vendors are listed = prepei na yparxei diaspora, dhladh na fianontai oloi oi Vendors

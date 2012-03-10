@@ -1,12 +1,9 @@
-<h1>
-  <%= @vendor.name %>
-</h1>
-
-<br />
-<br />
+<h1><%= @vendor.name %></h1>
 
 <h3>Προσφορές:</h3>
-<div class="row">
-  <%= render @offers %>
-</div>
-</ol>
+
+<% @offers.each_slice(4) do |offers_for_row| %>
+  <div class="row-fluid row-offers">
+    <%= render partial: 'offers/offer', collection: offers_for_row, as: :offer %>
+  </div>
+<% end %>

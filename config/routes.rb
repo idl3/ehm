@@ -7,6 +7,7 @@ Deals::Application.routes.draw do
 
   resources :vendors, path: 'v', only: [:index, :show]
   resources :offers, only: [:index, :show]
+  resources :categories, path: 'c', only: [:show]
 
   namespace :admin do
     match '/login', to:  'Sessions#new'

@@ -3,7 +3,7 @@ namespace :db do
   task populate: :environment do
     Rake::Task['db:reset'].invoke
     make_vendors(5)
-    make_offers(10)
+    make_offers(5)
 
   end
 end
@@ -32,6 +32,7 @@ def make_offers(qty)
       offer.initial_price = 16.50
       offer.starts_on = Date.current.yesterday
       offer.expires_on = Date.current + n
+      offer.category = Category.find(n+1)
       offer.save!
     end
   end

@@ -19,5 +19,8 @@
   <%= f.label "Εικόνα" %>
   <%= f.file_field :image %>
 
+  <%= f.label "Κατηγορία" %>
+  <%= collection_select(:offer, :category_id, Category.all, :id, :title) %>
+
   <%= f.submit "Create" %>
 <% end %>

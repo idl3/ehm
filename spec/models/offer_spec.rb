@@ -3,11 +3,12 @@ require 'spec_helper'
 describe Offer do
   let(:vendor) { FactoryGirl.create(:vendor) }
   before { @offer = vendor.offers.build(title: "Lorem ipsum", price: 1, initial_price: 123.45,
-                                          starts_on: Date.today, expires_on: Date.tomorrow ) }
+                                          starts_on: Date.today, expires_on: Date.tomorrow, category_id: 1 ) }
 
   subject { @offer }
 
   it { should respond_to :vendor_id }
+  it { should respond_to :category_id }
   it { should respond_to :title }
   it { should respond_to :price }
   it { should respond_to :initial_price }

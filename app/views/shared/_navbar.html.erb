@@ -14,16 +14,16 @@
         <div class="container">
           <ul class="nav">
             <li class="active">
-              <%= link_to "Όλες οι προσφορές", root_path %>
+              <%= link_to "Αρχική", root_path %>
             </li>
 
             <li class="dropdown" id="menu1">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
-                Ανά κατάστημα
+                Επιλέξτε Super Market
                 <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <% active_vendors.each do |vendor| %>
+                <% all_vendors.each do |vendor| %>
                 <li><%= link_to vendor.name, vendor %></li>
                 <% end %>
               </ul>

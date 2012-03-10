@@ -1,10 +1,12 @@
 class Offer < ActiveRecord::Base
-  attr_accessible :title, :price, :initial_price, :starts_on, :expires_on, :image
+  attr_accessible :title, :price, :initial_price, :starts_on, :expires_on, :image, :category_id
   belongs_to :vendor
+  belongs_to :category
 
-  has_attached_file :image # styles: { thumb: "140x130" }, default_styles: :thumb
+  has_attached_file :image #styles: { thumb: "140x130" }
 
   validates :vendor_id, presence: true
+  validates :category_id, presence: true
   validates :title, presence: true, length: { minimum: 6, maximum: 25 }
   validates :initial_price, presence: true, numericality: true, length: { maximum: 6 }
   validates :price, presence: true, numericality: { less_than: :initial_price }, length: { maximum: 6 }
@@ -13,7 +15,7 @@ class Offer < ActiveRecord::Base
 
   default_scope order: 'created_at DESC'
 
-  self.per_page = 8
+  self.per_page = 12
 
   def self.running_now
     Offer.where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current);

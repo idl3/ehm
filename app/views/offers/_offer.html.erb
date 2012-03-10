@@ -1,9 +1,10 @@
 <div class="span3">
   <div class="offer">
     <div class="offer-inner">
-    <h3>
-      <%=link_to offer.title, offer %>
-    </h3>
+    <h3><%= link_to offer.title, offer %></h3>
+    Κατηγορία: <%= offer.category.title %>
+    από <%= offer.vendor.name %>
+
   </div>
   </div>
 </div>
