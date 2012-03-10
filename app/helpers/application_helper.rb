@@ -4,7 +4,11 @@ module ApplicationHelper
   end
 
   def all_categories
-    Category.all
+    if params[:controller] == 'vendors'
+      Vendor.find_by_username(params[:vendor]).categories.all
+    else
+      Category.all
+    end
   end
 
   def active?(category)
