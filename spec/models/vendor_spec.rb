@@ -16,7 +16,6 @@
 #   it { should respond_to :username }
 #   it { should respond_to :offers }
 #   it { should respond_to :authenticate }
-#   it { should respond_to :remember_token }
 
 #   it { should be_valid }
 

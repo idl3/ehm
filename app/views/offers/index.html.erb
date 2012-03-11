@@ -1,13 +1,10 @@
 <% provide :title, "Όλες οι προσφορές" %>
 <% content_for :latest_item, " active" %>
+<% content_for :sidebar, 'shared/categories' %>
 
 <%= render 'sortby_links' %>
 
-<% @offers.each_slice(4) do |offers_for_row| %>
-  <div class="row-fluid row-offers">
-    <%= render partial: 'offer', collection: offers_for_row, as: :offer %>
-  </div>
-<% end %>
+<%= render 'offers' %>
 
 <div class="row-fluid">
 <%= will_paginate %>

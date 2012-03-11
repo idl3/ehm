@@ -12,6 +12,14 @@ module ApplicationHelper
   end
 
   def active?(category)
-    params[:id].to_i == category.id
+    case controller_name
+    when 'vendors'
+      params[:c].to_i == category.id
+    when 'categories'
+      params[:id].to_i == category.id
+    when 'offers'
+      @offer.category.id == category.id if action_name == "show"
+    end
   end
+
 end
