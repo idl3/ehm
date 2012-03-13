@@ -3,7 +3,7 @@
 module SessionHelper
   def reset_sessions
     session[:vendor_id] = nil
-    session[:city_id]   = nil
+    cookies[:city_id]   = nil
   end
 
   def reset_vendor
@@ -12,7 +12,7 @@ module SessionHelper
 
   def current_city
     if city_selected?
-      City.find(session[:city_id]).name
+      City.find(cookies[:city_id]).name
     else
       "Όλες οι πόλεις"
     end
@@ -27,7 +27,7 @@ module SessionHelper
   end
 
   def city_selected?
-    if session[:city_id] == nil
+    if cookies[:city_id] == nil
       false
     else
       true
@@ -42,4 +42,7 @@ module SessionHelper
     end
   end
 
+  def check_city_and_redirect
+    redirect_to select_city_url unless city_selected?
+  end
 end

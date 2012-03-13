@@ -2,21 +2,25 @@
   <div class="navbar-inner">
     <div class="container menu">
 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
 
-      <a href="/"><img src="../assets/logo.png" class="logo" /></a>
+      <a class="" href="/">
+       <img src="../assets/logo.png" class="logo" />
+      </a>
 
-        <div class="container">
-          <ul class="nav nav-pills">
-            <li class="divider-vertical"></li>
-            <%= render 'shared/city_dropdown' %>
-            <%= render 'shared/vendor_dropdown' %>
-          </ul>
-        </div>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="divider-vertical"></li>
+          <%= render 'shared/city_dropdown' %>
+          <%= render 'shared/vendor_dropdown' %>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>
