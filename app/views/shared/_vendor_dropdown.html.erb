@@ -1,18 +1,17 @@
-<li class="dropdown active" id="menu1">
+<li class="dropdown active vendor" id="menu1">
   <a class="dropdown-toggle" data-toggle="dropdown" >
-    <%= current_vendor %>
+    <%= current_vendor_name %>
     <b class="caret"></b>
   </a>
 
   <ul class="dropdown-menu">
-
-    <% unless current_page?(root_path) %>
-    <li class="all-vendors"><%= link_to "Όλα τα καταστήματα", root_path %></li>
+    <% if params[:controller] == 'vendors' %>
+    <li><%= link_to "Όλα τα Super Market", city_path(stored_city) %></li>
     <% end %>
-
     <% all_vendors.each do |vendor| %>
-      <li><%= link_to vendor.name, vendor %></li>
+      <% unless vendor.name == current_vendor_name %>
+        <li><%= link_to vendor.name, vendor %></li>
+      <% end %>
     <% end %>
-
   </ul>
 </li>

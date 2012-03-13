@@ -2,8 +2,10 @@
   <div class="offer">
     <div class="offer-inner">
     <h3><%= link_to offer.title, offer %></h3>
-    Κατηγορία: <%= offer.category.title %>
-    από <%= offer.vendor.name %>
+    Κατηγορία: <%= offer.category.title %><br />
+    από <%= offer.vendor.name %><br />
+    ξεκίνησε στις: <%= offer.starts_on %><br />
+    λήγει στις: <%= offer.expires_on %>
   </div>
   </div>
 </div>

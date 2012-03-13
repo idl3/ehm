@@ -1,15 +1,13 @@
 Deals::Application.routes.draw do
-  root to: "Cities#show"
+  root to: "Cities#home"
 
   match '/admin' => 'Admin::Pages#index'
-  match '/select_city' => 'Cities#select_city'
   match '/:city' => 'Cities#show'
   match '/v/:vendor' => 'Vendors#show'
-  match '/expiring' => 'Offers#expiring'
 
   resources :vendors, path: 'v', only: [:index, :show]
   resources :offers, only: [:index, :show]
-  resources :categories, path: 'c', only: [:show]
+  resources :categories, path: 'c', only: [:show] # NEST THIS INSIDE CITIES?
   resources :cities, path: '/', only: [:show]
 
   namespace :admin do

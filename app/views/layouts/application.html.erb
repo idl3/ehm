@@ -12,6 +12,8 @@
 <%= render 'shared/navbar' %>
 
 <div class="container">
+  <%= render 'shared/welcome_alert' if new_visitor? %>
+
   <div class="row-fluid">
     <div class="span2 sidebar">
       <%= render content_for :sidebar %>
@@ -25,6 +27,7 @@
 
 <%= debug(session) %>
 <%= debug(params) %>
+<%= debug(cookies) %>
 
 </body>
 </html>

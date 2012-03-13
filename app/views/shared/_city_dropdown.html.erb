@@ -1,18 +1,14 @@
-<li class="dropdown active" id="menu1">
+<li class="dropdown active city" id="menu1">
   <a class="dropdown-toggle" data-toggle="dropdown" >
-    <%= current_city %>
+    <%= current_city_name %>
     <b class="caret"></b>
   </a>
 
   <ul class="dropdown-menu">
-
-    <% unless current_page?(root_path) %>
-    <li class="all-vendors"><%= link_to "Όλες οι πόλεις", root_path %></li>
-    <% end %>
-
     <% all_cities.each do |city| %>
-      <li><%= link_to city.name, city %></li>
+      <% unless city.name == current_city_name %>
+        <li><%= link_to city.name, city %></li>
+      <% end %>
     <% end %>
-
   </ul>
 </li>

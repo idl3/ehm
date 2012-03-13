@@ -7,4 +7,8 @@ class City < ActiveRecord::Base
   def to_param
     name
   end
+
+  def self.initial
+    City.find(1)
+  end
 end
