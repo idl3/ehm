@@ -4,11 +4,11 @@ Deals::Application.routes.draw do
   match '/admin' => 'Admin::Pages#index'
   match '/v/:vendor' => 'Vendors#show'
   match '/expiring' => 'Offers#expiring'
- # match '/v/:vendor/c/:category_id' => 'Vendors#show'
 
   resources :vendors, path: 'v', only: [:index, :show]
   resources :offers, only: [:index, :show]
   resources :categories, path: 'c', only: [:show]
+  resources :cities, only: [:show]
 
   namespace :admin do
     match '/login', to:  'Sessions#new'

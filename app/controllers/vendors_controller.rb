@@ -7,5 +7,7 @@ class VendorsController < ApplicationController
     else
       @offers = @vendor.offers
     end
+
+    session[:vendor_id] = @vendor.id
   end
 end

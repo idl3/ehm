@@ -1,0 +1,11 @@
+<!-- fix that -->
+<% provide :sidebar, 'shared/categories' %>
+<!-- fix that -->
+
+<h3><%= @city.name %></h3>
+
+<% @offers.each_slice(4) do |offers_for_row| %>
+  <div class="row-fluid row-offers">
+    <%= render partial: 'offers/offer', collection: offers_for_row, as: :offer %>
+  </div>
+<% end %>

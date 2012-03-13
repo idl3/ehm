@@ -4,7 +4,7 @@
   </li>
 
   <% all_categories.each do |category| %>
-  <li <%= raw 'class="active"' if active?(category) %>>
+  <li <%= raw 'class="active"' if active_category?(category) %>>
     <%= link_to category.title, @vendor.username + "?c=" + category.id.to_s %>
   </li>
   <% end %>
