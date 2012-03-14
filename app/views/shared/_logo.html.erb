@@ -1,0 +1,9 @@
+<% unless stored_city? %>
+  <%= link_to root_path do %>
+    <img src="../assets/logo.png" class="logo" />
+  <% end %>
+<% else %>
+  <%= link_to city_path(stored_city) do %>
+    <img src="../assets/logo.png" class="logo" />
+  <% end %>
+<% end %>
