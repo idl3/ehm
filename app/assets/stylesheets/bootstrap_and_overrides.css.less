@@ -1,0 +1,116 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+.btn {
+  .btn-large;
+  .btn-primary;
+}
+
+
+@blueDarker: #182945;
+@blueDark: #1D3257;
+@normalBlue: #1E3458;
+@borderLightGrey: #DADBE4;
+
+@navbarBackground: @blueDarker;
+@navbarBackgroundHighlight: @blueDark;
+@navbarLinkColor: #ccc;
+@navbarLinkColorHover: white;
+
+body {
+  background: #EAEDF6;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  margin-bottom: 30px;
+
+  img {
+    float: left;
+    padding-top: 4px;
+    margin-right: 30px;
+  }
+
+  .vendor {
+    font-size: 15px;
+    margin-left: 15px;
+    a.dropdown-toggle { color: #ccc; }
+  }
+
+  .city {
+    font-size: 19px;
+  }
+
+  .navbar-inner {
+    border-radius: 0;
+    height: 80px;
+    background-image: url(navbar-bg.png);
+    .menu { padding-top: 20px;  }
+    .arrow {
+      background: url(../assets/dropdown-arrow.png) no-repeat;
+      width: 8px;
+      height: 5px;
+      display: inline;
+      text-indent: -9999px;
+    }
+  }
+
+  .nav .active > a { .border-radius() }
+  .navbar .nav .active > a:hover { background: #0F1B2F; }
+  .nav > li > a { margin-left: 20px; }
+  .dropdown-menu { left: 28px; font-size:15px; }
+}
+
+
+
+
+.offersnav {
+  font-size: 15px;
+  font-weight: bold;
+
+  .link { margin-bottom: 10px; margin-left: 0px; }
+  .active a { color: @normalBlue; }
+  a { color: #999;}
+  a:hover { color: #666; text-decoration:none; }
+
+  .span12 {
+  border-bottom: 1px solid @borderLightGrey;
+  margin-bottom: 13px;
+  }
+}
+
+.offer {
+  width: 170px;
+  height: 190px;
+  background: white;
+  margin-bottom: 30px;
+}
+
+.offer-inner {
+  padding:9px;
+  max-height: 174px;
+  height: 174px;
+}
+
+.caret {
+  border: none;
+  width: 8px;
+  height: 5px;
+  background: url(../assets/dropdown-arrow.png) no-repeat;
+  padding-top: 1px;
+}

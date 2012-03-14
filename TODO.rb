@@ -1,3 +1,6 @@
+# change body color to original
+#reduce navbar height
+
 # Reimplement categories controller/resources -> NEST CATEGORIES INSIDE CITIES RESOURCE??
 
 # implement "Popular", "Latest", "Expire soon" functionality
