@@ -26,10 +26,11 @@
 @blueDark: #1D3257;
 @normalBlue: #1E3458;
 @borderLightGrey: #DADBE4;
+@beige: #FBF6CE;
 
 @navbarBackground: @blueDarker;
 @navbarBackgroundHighlight: @blueDark;
-@navbarLinkColor: #ccc;
+
 @navbarLinkColorHover: white;
 
 body {
@@ -54,13 +55,14 @@ body {
 
   .city {
     font-size: 19px;
+    a.dropdown-toggle { color: @beige; }
   }
 
   .navbar-inner {
     border-radius: 0;
-    height: 80px;
+    height: 75px;
     background-image: url(navbar-bg.png);
-    .menu { padding-top: 20px;  }
+    .menu { padding-top: 18px;  }
     .arrow {
       background: url(../assets/dropdown-arrow.png) no-repeat;
       width: 8px;
@@ -71,13 +73,9 @@ body {
   }
 
   .nav .active > a { .border-radius() }
-  .navbar .nav .active > a:hover { background: #0F1B2F; }
   .nav > li > a { margin-left: 20px; }
   .dropdown-menu { left: 28px; font-size:15px; }
 }
-
-
-
 
 .offersnav {
   font-size: 15px;

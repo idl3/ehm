@@ -2,11 +2,7 @@
 
 module MenuHelper
   def all_vendors
-    if stored_city?
-      City.find(cookies[:city_id]).vendors
-    else
-      Vendor.all
-    end
+    stored_city? ? City.find(cookies[:city_id]).vendors : Vendor.all
   end
 
   def all_cities
@@ -14,19 +10,19 @@ module MenuHelper
   end
 
   def current_city_name
-    if stored_city?
-      City.find(cookies[:city_id]).name
+    if !params[:city].nil?
+      City.find_by_name(params[:city]).name
     else
-      City.initial.name
+      stored_city? ? City.find(cookies[:city_id]).name : "Επιλέξτε πόλη"
     end
+
   end
 
   def current_vendor_name
-    if stored_vendor?
-      Vendor.find(session[:vendor_id]).name
-    else
-      "Όλα τα Super Market"
-    end
+    stored_vendor? ? Vendor.find(session[:vendor_id]).name : "Όλα τα Super Market"
   end
 
+  def active_category?(category)
+    params[:c].to_i == category.id
+  end
 end

@@ -12,6 +12,9 @@ gem 'will_paginate', '~> 3.0'
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '1.4.0'
+end
+
+group :test, :development do
   gem 'rspec-rails', '~> 2.8.1'
 end
 
@@ -22,7 +25,6 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'less'
 end
-
 
 # gem 'bootstrap-sass', '~> 2.0.1'
 # gem 'faker', '1.0.1'

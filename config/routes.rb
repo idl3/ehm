@@ -7,7 +7,6 @@ Deals::Application.routes.draw do
 
   resources :vendors, path: 'v', only: [:index, :show]
   resources :offers, only: [:index, :show]
-  resources :categories, path: 'c', only: [:show] # NEST THIS INSIDE CITIES?
   resources :cities, path: '/', only: [:show]
 
   namespace :admin do

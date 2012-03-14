@@ -3,11 +3,16 @@ class VendorsController < ApplicationController
     category = params[:c]
     @vendor = Vendor.find_by_username(params[:vendor])
     if category
-      @offers = @vendor.offers.running_now.where("category_id = #{category}")
+      @offers = @vendor.offers.where("category_id = #{category}")
     else
-      @offers = @vendor.offers.running_now
+      @offers = @vendor.offers
     end
+    store_vendor
+  end
 
+  private
+
+  def store_vendor
     session[:vendor_id] = @vendor.id
   end
 end

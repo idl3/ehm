@@ -13,13 +13,9 @@ class Offer < ActiveRecord::Base
   validates :starts_on, presence: true, date: { after: Date.current.prev_year, message: "Too old!" }
   validates :expires_on, presence:true, date: { after: :starts_on, message: "Must be after the starting date" }
 
-  default_scope order: 'created_at DESC'
+  default_scope where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current)
 
   self.per_page = 12
-
-  def self.running_now
-    Offer.where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current);
-  end
 
   def self.expiring_soon
     Offer.running_now.where("expires_on = ? OR expires_on = ?", Date.current, Date.current.tomorrow)

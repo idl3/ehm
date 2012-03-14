@@ -4,7 +4,11 @@ module SessionHelper
   end
 
   def stored_city
-    City.find(cookies[:city_id])
+    stored_city? ? City.find(cookies[:city_id]) : City.find_by_name(params[:city])
+  end
+
+  def current_city
+    City.find_by_name(params[:city])
   end
 
   def stored_city?

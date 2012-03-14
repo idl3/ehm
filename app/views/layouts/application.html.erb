@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for :title %> : deals.gr</title>
+  <title><%= yield :title %> - ιδέα</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,7 +12,7 @@
 <%= render 'shared/navbar' %>
 
 <div class="container">
-  <%= render 'shared/welcome_alert' if new_visitor? %>
+  <%= render 'shared/welcome_message' if new_visitor? %>
 
   <div class="row-fluid">
     <div class="span2 sidebar">
@@ -25,9 +25,12 @@
   </div>
 </div>
 
-<%= debug(session) %>
-<%= debug(params) %>
-<%= debug(cookies) %>
+Session:
+<p><%= debug(session) %></p>
+
+Params:
+<p><%= debug(params) %></p>
+
 
 </body>
 </html>

@@ -1,22 +1,15 @@
 module ApplicationHelper
 
 # FINISH THIS FOR ALL CONTROLLERS
-  def all_categories
-    if params[:controller] == 'vendors'
-      Vendor.find_by_username(params[:vendor]).categories.all
-    else
-      Category.all
-    end
+  def vendor_categories
+    Vendor.find_by_username(params[:vendor]).categories.all
   end
 
-  def active_category?(category)
-    case controller_name
-    when 'vendors'
-      params[:c].to_i == category.id
-    when 'categories'
-      params[:id].to_i == category.id
-    when 'offers'
-      @offer.category.id == category.id if action_name == "show"
-    end
+  def city_categories
+    stored_city.categories
+  end
+
+  def title(page_title)
+    content_for(:title) { page_title }
   end
 end
