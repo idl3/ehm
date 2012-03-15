@@ -3,7 +3,7 @@ class Offer < ActiveRecord::Base
   belongs_to :vendor
   belongs_to :category
 
-  has_attached_file :image #styles: { thumb: "140x130" }
+  has_attached_file :image, :styles => { :thumb => "160x150" }
 
   validates :vendor_id, presence: true
   validates :category_id, presence: true

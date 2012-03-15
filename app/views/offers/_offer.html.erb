@@ -1,11 +1,9 @@
 <div class="span3">
   <div class="offer">
-    <div class="offer-inner">
-    <h3><%= link_to offer.title, offer %></h3>
-    Κατηγορία: <%= offer.category.title %><br />
-    από <%= offer.vendor.name %><br />
-    ξεκίνησε στις: <%= offer.starts_on %><br />
-    λήγει στις: <%= offer.expires_on %>
-  </div>
+    <div class="inner">
+      <div class="image"><%= image_tag offer.image.url :thumb %></div>
+      <span class="title"><%= offer.title %></span>
+    </div>
+  </a>
   </div>
 </div>
