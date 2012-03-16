@@ -21,17 +21,21 @@
   .btn-primary;
 }
 
-
-@blueDarker: #182945;
 @blueDark: #1D3257;
 @normalBlue: #1E3458;
 @borderLightGrey: #DADBE4;
-@beige: #FBF6CE;
 
-@navbarBackground: @blueDarker;
+@paletteDarkBlue: #182945;
+@paletteBlue: #46A5E5;
+@paletteBeige: #FBF6CE;
+@paletteGreen: #A1C436;
+
+@ownBlue: #419CD8;
+@paletteLightBlue: #2C4C80;
+
+@navbarBackground: @paletteDarkBlue;
 @navbarBackgroundHighlight: @blueDark;
 
-@navbarLinkColorHover: white;
 
 body {
   background: #E8E8F0;
@@ -47,22 +51,20 @@ body {
     margin-right: 30px;
   }
 
+  .city { font-size: 21px;}
+
   .vendor {
     font-size: 15px;
-    margin-left: 15px;
-    a.dropdown-toggle { color: #ccc; }
-  }
-
-  .city {
-    font-size: 19px;
-    a.dropdown-toggle { color: @beige; }
+    margin-left: 40px;
   }
 
   .navbar-inner {
     border-radius: 0;
     height: 75px;
     background-image: url(navbar-bg.png);
+
     .menu { padding-top: 18px;  }
+
     .arrow {
       background: url(../assets/dropdown-arrow.png) no-repeat;
       width: 8px;
@@ -78,25 +80,92 @@ body {
 }
 
 .offer {
-  width: 160px;
+  width: 150px;
   height: 180px;
   background: white;
   padding: 10px;
+  margin: 0 auto;
 
   .inner {
     height: 100%;
+    position: relative;
   }
 
-  .image { height: 150px; }
+  .image {
+    display: table;
+    height: 155px;
+    overflow: hidden;
 
-  .title {
+    div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  a:hover { text-decoration: none; }
+
+  .price {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 15px;
+    left: -29px;
+    background: url(../assets/price-bg.png) repeat-y;
+    text-align:center;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+
+    span {
+      display: block;
+      margin-top: 6px;
+    }
+
+    .initial {
+      font-size: 12px;
+      text-decoration: line-through;
+      font-weight: normal;
+    }
+  }
+
+  h2 {
     font-size: 12px;
     font-weight: bold;
-    color: #666;
+    color: #888;
+    line-height: 1em;
+  }
+
+  .discount {
+    position: absolute;
+    background: url(../assets/discount-bg.png) repeat-x;
+    width: 29px;
+    height: 29px;
+    top:-13px;
+    right: -13px;
+    font-size:11px;
+    color: white;
+    text-align:center;
+    padding-top: 6px;
   }
 }
 
-.row-offers .span3 { margin-bottom: 40px; }
+.span3 h3 {
+  font-size: 12px;
+  margin-left: 3px;
+  color: @ownBlue;
+}
+
+.row-offers {
+  margin-bottom: 60px;
+
+  .vendor {
+    width: 160px;
+    text-align: right;
+    margin: 0 auto;
+
+    a:hover { text-decoration: none; color: #205576;}
+  }
+}
 
 .caret {
   border: none;

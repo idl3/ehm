@@ -1,12 +1,4 @@
 <% provide :sidebar, 'categories' %>
 <% provide :title, @vendor.name %>
 
-<h1><%= @vendor.name %></h1>
-
-<h3>Προσφορές:</h3>
-
-<% @offers.each_slice(4) do |offers_for_row| %>
-  <div class="row-fluid row-offers">
-    <%= render partial: 'offers/offer', collection: offers_for_row, as: :offer %>
-  </div>
-<% end %>
+<%= render partial: "offers/offers", object: @offers %>

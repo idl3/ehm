@@ -1,5 +1,5 @@
 <% @offers.each_slice(4) do |offers_for_row| %>
   <div class="row-fluid row-offers">
-    <%= render partial: 'offer', collection: offers_for_row, as: :offer %>
+    <%= render partial: 'offers/offer', collection: offers_for_row, as: :offer %>
   </div>
 <% end %>

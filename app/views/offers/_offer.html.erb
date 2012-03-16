@@ -1,9 +1,33 @@
 <div class="span3">
   <div class="offer">
+    <%= link_to offer do %>
     <div class="inner">
-      <div class="image"><%= image_tag offer.image.url :thumb %></div>
-      <span class="title"><%= offer.title %></span>
+
+      <div class="image">
+        <div>
+          <%= image_tag offer.image.url :thumb %>
+        </div>
+      </div>
+
+      <div class="price">
+        <span class="initial"><%= offer.initial_price %></span>
+        <span><%= offer.price %></span>
+      </div>
+
+      <div class="discount">
+        -35%
+      </div>
+
+      <h2>
+        <%= offer.title %>
+      </h2>
+
     </div>
-  </a>
+    <% end %>
   </div>
+
+  <div class="vendor">
+    <h3><%= link_to offer.vendor.name, vendor_path(offer.vendor) %></h3>
+  </div>
+
 </div>
