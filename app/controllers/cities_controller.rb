@@ -5,7 +5,7 @@ class CitiesController < ApplicationController
 
   def home
     @city = City.initial
-    @offers = @city.offers
+    @offers = @city.offers.paginate(:page => params[:page])
   end
 
   def show
@@ -13,9 +13,9 @@ class CitiesController < ApplicationController
     @city = City.find_by_name(params[:city])
 
     if category
-      @offers = @city.offers.where("category_id = #{category}")
+      @offers = @city.offers.where("category_id = #{category}").paginate(:page => params[:page])
     else
-      @offers = @city.offers
+      @offers = @city.offers.paginate(:page => params[:page])
     end
     store_city
   end

@@ -6,7 +6,7 @@ namespace :db do
     Rake::Task['db:reset'].invoke
     make_vendors(5)
     make_offers(5)
-
+    connect_vendors_to_cities
   end
 end
 
@@ -40,3 +40,8 @@ def make_offers(qty)
   end
 end
 
+def connect_vendors_to_cities
+  Vendor.count.times do |n|
+    Vendor.find(n+1).cities<<City.find(n+1)
+  end
+end
