@@ -1,5 +1,9 @@
 <% provide :sidebar, 'shared/categories' %>
 <% title @offer.title + " / " + @offer.vendor.name %>
 
-<h2><%= @offer.title %></h2>
-από <%= @vendor.name %>
+<h1><%= @offer.title %></h1>
+<%= image_tag @offer.image.url %><br />
+
+ξεκίνησε: <%= @offer.starts_on %>
+<br />
+λήγει: <%= @offer.expires_on %>

@@ -5,7 +5,7 @@
   </a>
 
   <ul class="dropdown-menu">
-    <% if params[:controller] == 'vendors' && stored_city? %>
+    <% if (params[:controller] == 'vendors' || params[:controller] == 'offers') && stored_city? %>
     <li><%= link_to "Όλα τα Super Market", city_path(stored_city) %></li>
     <% end %>
     <% all_vendors.each do |vendor| %>

@@ -15,7 +15,7 @@ class Offer < ActiveRecord::Base
 
   default_scope where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current)
 
-  self.per_page = 8
+  self.per_page = 12
 
   def self.expiring_soon
     Offer.running_now.where("expires_on = ? OR expires_on = ?", Date.current, Date.current.tomorrow)
