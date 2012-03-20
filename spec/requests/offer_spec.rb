@@ -8,7 +8,7 @@ describe "Offer page" do
   before "select the city" do
     visit offer_path(offer)
     select city.name
-    click_button "Save changes"
+    click_button "Συνέχεια"
     visit offer_path(offer)
   end
 
