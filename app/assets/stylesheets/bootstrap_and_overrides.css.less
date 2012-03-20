@@ -1,49 +1,65 @@
 @import "twitter/bootstrap/bootstrap";
-@import "twitter/bootstrap/responsive";
+/*@import "twitter/bootstrap/responsive";*/
 
 // Set the correct sprite paths
 @iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
 
-.btn {
-  .btn-large;
-  .btn-primary;
-}
 
-@blueDark: #1D3257;
-@normalBlue: #1E3458;
+/*    VARIABLES    */
+
+
+/* original palette */
+
 @borderLightGrey: #DADBE4;
-
 @paletteDarkBlue: #182945;
 @paletteBlue: #46A5E5;
-@paletteBeige: #FBF6CE;
 @paletteGreen: #A1C436;
+@paletteBeige: #FBF6CE;
+@paletteGrey: #E8E8F0;
 
-@ownBlue: #419CD8;
-@paletteLightBlue: #2C4C80;
+
+/* typography colors */
+
+@linksBlue: #40A4E7;
+
+
+/* Bootstrap overrides */
 
 @navbarBackground: @paletteDarkBlue;
-@navbarBackgroundHighlight: @blueDark;
+@navbarBackgroundHighlight: #1D3257;
 
+
+
+
+/*    MIXINS    */
+
+.border-bottom { border-bottom: 1px solid @borderLightGrey; }
+
+
+
+
+/*    GENERAL   */
 
 body {
-  background: #E8E8F0 url(main-bg.gif) repeat;
+  background: @paletteGrey url(main-bg.gif) repeat;
   font-family: Helvetica, Arial, sans-serif;
-  color: @normalBlue;
 }
 
-.container-fluid { padding-left: 0; }
+h1 { font-size: 24px; }
+h2 { font-size: 16px; }
+h1, h2, h3, h4, h5, h6 { color: #888; }
+
+.breadcrumbs { margin-bottom: 15px; }
+
+a { color: @linksBlue; }
+
+
+
+
+
+/*     NAVBAR     */
 
 .fp {
   margin-bottom: 30px;
@@ -83,6 +99,21 @@ body {
 }
 
 .navbar-inner { border-radius: 0; }
+
+.caret {
+  border: none;
+  width: 8px;
+  height: 5px;
+  background: url(../assets/dropdown-arrow.png) no-repeat;
+  padding-top: 1px;
+}
+
+
+
+
+
+
+/*      OFFERS' GRID (city & vendor controllers)      */
 
 .offer {
   width: 150px;
@@ -157,28 +188,23 @@ body {
 div.vendor h3 {
   font-size: 12px;
   margin-left: 3px;
-  color: @ownBlue;
 }
 
 .row-offers {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   .vendor {
     width: 160px;
     text-align: right;
-    /*margin: 0 auto;*/
 
     a:hover { text-decoration: none; color: #205576;}
   }
 }
 
-.caret {
-  border: none;
-  width: 8px;
-  height: 5px;
-  background: url(../assets/dropdown-arrow.png) no-repeat;
-  padding-top: 1px;
-}
+
+
+
+/*     OFFERS NAV MENU (popular,expiring etc.)      */
 
 .offersnav {
   font-size: 14px;
@@ -189,25 +215,19 @@ div.vendor h3 {
     margin-left: 0px;
   }
 
-  .active a { color: @normalBlue; }
+  .active a { color: red; }
   a { color: #999;}
   a:hover { color: #666; text-decoration:none; }
 
   .span12 {
-  border-bottom: 1px solid @borderLightGrey;
-  margin-bottom: 18px;
+    .border-bottom;
+    margin-bottom: 18px;
   }
 }
 
-h1 { font-size: 24px; }
-h2 { font-size: 16px; }
-
-h1, h2, h3, h4, h5, h6 { color: #888; }
-
-.separator { font-size: 14px; font-weight: normal; }
-
-.breadcrumbs { margin-bottom: 15px; }
 
 
 
+/*       OFFER PAGE (offers#show)       */
 
+div.offer-title { .border-bottom; }
