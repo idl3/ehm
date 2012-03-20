@@ -1,0 +1,6 @@
+CHOOSE YOUR CITY
+
+<%= form_tag root_path do %>
+  <%= collection_select(:initial_city, :id, City.all, :id, :name) %>
+  <%= submit_tag %>
+<% end %>
