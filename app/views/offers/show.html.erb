@@ -1,9 +1,26 @@
-<% provide :sidebar, 'shared/categories' %>
 <% title @offer.title + " / " + @offer.vendor.name %>
+<% provide :sidebar, 'more_from_vendor' %>
 
-<h1><%= @offer.title %></h1>
-<%= image_tag @offer.image.url %><br />
+<div class="row-fluid">
+  <div class="span12 offer-title">
+    <h1><%= @offer.title %></h1>
+    <h2 class="vendor">από @offer.vendor.name</h2>
+  </div>
+</div>
 
-ξεκίνησε: <%= @offer.starts_on %>
-<br />
-λήγει: <%= @offer.expires_on %>
+<div class="row-fluid">
+  <div class="span6">
+    ξεκίνησε: <%= @offer.starts_on %><br />
+    λήγει: <%= @offer.expires_on %>
+  </div>
+
+  <div class="span6">
+    <%= image_tag @offer.image.url %>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    share this
+  </div>
+</div>
