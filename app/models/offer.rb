@@ -11,7 +11,7 @@ class Offer < ActiveRecord::Base
   validates :initial_price, presence: true, numericality: true, length: { maximum: 6 }
   validates :price, presence: true, numericality: { less_than: :initial_price }, length: { maximum: 6 }
   validates :starts_on, presence: true, date: { after: Date.current.prev_year, message: "Too old!" }
-  validates :expires_on, presence:true, date: { after: :starts_on, message: "Must be after the starting date" }
+  validates :expires_on, presence: true, date: { after: :starts_on, message: "Must be after the starting date" }
 
   default_scope where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current)
 

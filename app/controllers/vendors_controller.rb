@@ -1,4 +1,6 @@
 class VendorsController < ApplicationController
+  before_filter :redirect_if_no_cookie
+
   def show
     category = params[:c]
     @vendor = Vendor.find_by_username(params[:vendor])

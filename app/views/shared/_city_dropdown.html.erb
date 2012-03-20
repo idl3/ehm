@@ -1,12 +1,12 @@
 <li class="dropdown active city" id="menu1">
   <a class="dropdown-toggle" data-toggle="dropdown" >
-    <%= current_city_name %>
+    <%= current_city.name %>
     <b class="caret"></b>
   </a>
 
   <ul class="dropdown-menu">
     <% all_cities.each do |city| %>
-      <% unless city.name == current_city_name %>
+      <% unless city.name == current_city.name %>
         <li><%= link_to city.name, city %></li>
       <% end %>
     <% end %>

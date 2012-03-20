@@ -3,12 +3,8 @@ module SessionHelper
     session[:vendor_id] = nil
   end
 
-  def stored_city
-    stored_city? ? City.find(cookies[:city_id]) : City.find_by_name(params[:city])
-  end
-
   def current_city
-    City.find_by_name(params[:city])
+    City.find(cookies[:city_id])
   end
 
   def stored_city?
@@ -19,8 +15,8 @@ module SessionHelper
     !session[:vendor_id].nil?
   end
 
-  def new_visitor?
-    cookies[:visited_before].nil?
+  def redirect_if_no_cookie
+    redirect_to welcome_path unless stored_city?
   end
 
 end

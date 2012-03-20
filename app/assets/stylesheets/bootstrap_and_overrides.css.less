@@ -38,10 +38,12 @@
 
 
 body {
-  background: #E8E8F0;
+  background: #E8E8F0 url(main-bg.gif) repeat;
   font-family: Helvetica, Arial, sans-serif;
   color: @normalBlue;
 }
+
+.container-fluid { padding-left: 0; }
 
 .fp {
   margin-bottom: 30px;
@@ -60,10 +62,11 @@ body {
   }
 
   .navbar-inner {
-    height: 75px;
+    height: 70px;
     background-image: url(navbar-bg.png);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.25), inset 0 -34px 0 rgba(0, 0, 0, 0.1);
 
-    .menu { padding-top: 18px;  }
+    .menu { padding-top: 15px; }
 
     .arrow {
       background: url(../assets/dropdown-arrow.png) no-repeat;
@@ -151,7 +154,7 @@ body {
   }
 }
 
-.span3 h3 {
+.span4 h3 {
   font-size: 12px;
   margin-left: 3px;
   color: @ownBlue;

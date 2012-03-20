@@ -1,6 +1,7 @@
 Deals::Application.routes.draw do
-  root to: "Cities#home"
+  root to: "Cities#show"
 
+  match '/welcome' => 'Welcome#home'
   match '/admin' => 'Admin::Pages#index'
   match '/:city' => 'Cities#show'
   match '/v/:vendor' => 'Vendors#show'
