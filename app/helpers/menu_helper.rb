@@ -10,7 +10,7 @@ module MenuHelper
   end
 
   def current_vendor_name
-    stored_vendor? ? Vendor.find(session[:vendor_id]).name : "Όλα τα Super Market"
+    stored_vendor? ? Vendor.find(session[:vendor_id]).name : "Όλα τα Supermarkets"
   end
 
   def active_category?(category)

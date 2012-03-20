@@ -4,8 +4,8 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     Rake::Task['db:reset'].invoke
-    make_vendors(5)
-    make_offers(5)
+    make_vendors(10)
+    make_offers_for_each_vendor(10)
     connect_vendors_to_cities
   end
 end
@@ -25,7 +25,7 @@ def make_vendors(qty)
   end
 end
 
-def make_offers(qty)
+def make_offers_for_each_vendor(qty)
   Vendor.all.each do |vendor|
     qty.times do |n|
       offer = vendor.offers.build
@@ -42,6 +42,6 @@ end
 
 def connect_vendors_to_cities
   Vendor.count.times do |n|
-    Vendor.find(n+1).cities<<City.find(n+1)
+    Vendor.find(n+1).cities<<[City.find(n+1),City.find(n+2)]
   end
 end

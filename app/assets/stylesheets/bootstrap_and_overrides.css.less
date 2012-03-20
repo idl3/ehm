@@ -89,7 +89,7 @@ body {
   height: 180px;
   background: white;
   padding: 10px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 
   .inner {
     height: 100%;
@@ -114,7 +114,7 @@ body {
     width: 55px;
     height: 55px;
     top: 15px;
-    left: -29px;
+    left: -10px;
     background: url(../assets/price-bg.png) repeat-y;
     text-align:center;
     font-size: 17px;
@@ -154,7 +154,7 @@ body {
   }
 }
 
-.span4 h3 {
+div.vendor h3 {
   font-size: 12px;
   margin-left: 3px;
   color: @ownBlue;
@@ -166,7 +166,7 @@ body {
   .vendor {
     width: 160px;
     text-align: right;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 
     a:hover { text-decoration: none; color: #205576;}
   }
@@ -181,24 +181,32 @@ body {
 }
 
 .offersnav {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 
-  .link { margin-bottom: 10px; margin-left: 0px; }
+  .link {
+    margin-bottom: 12px;
+    margin-left: 0px;
+  }
+
   .active a { color: @normalBlue; }
   a { color: #999;}
   a:hover { color: #666; text-decoration:none; }
 
   .span12 {
   border-bottom: 1px solid @borderLightGrey;
-  margin-bottom: 13px;
+  margin-bottom: 18px;
   }
 }
 
 h1 { font-size: 24px; }
+h2 { font-size: 16px; }
 
-h1, h2, h3, h4, h5, h6 { color: @normalBlue; }
+h1, h2, h3, h4, h5, h6 { color: #888; }
 
+.separator { font-size: 14px; font-weight: normal; }
+
+.breadcrumbs { margin-bottom: 15px; }
 
 
 
