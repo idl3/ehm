@@ -6,7 +6,6 @@
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
 
 
-
 /*    VARIABLES    */
 
 
@@ -70,7 +69,7 @@ a { color: @linksBlue; }
     margin-right: 30px;
   }
 
-  .city { font-size: 21px;}
+  .city { font-size: 21px; }
 
   .vendor {
     font-size: 15px;
@@ -120,7 +119,6 @@ a { color: @linksBlue; }
   height: 180px;
   background: white;
   padding: 10px;
-  /*margin: 0 auto;*/
 
   .inner {
     height: 100%;
@@ -221,6 +219,7 @@ div.vendor h3 {
 
   .span12 {
     .border-bottom;
+
     margin-bottom: 18px;
   }
 }
@@ -230,4 +229,46 @@ div.vendor h3 {
 
 /*       OFFER PAGE (offers#show)       */
 
-div.offer-title { .border-bottom; }
+div.offer-title {
+  .border-bottom;
+
+  margin-bottom: 15px;
+  padding-bottom: 9px;
+}
+
+
+
+/*          WELCOME PAGE          */
+
+body#welcome {
+  background: @paletteDarkBlue;
+  font-family: Arial, sans-serif;
+
+  div.welcome {
+    background: url(welcome-bg.png) center no-repeat;
+    float:none;
+    margin-top:15%;
+    .center-block;
+  }
+
+ .left {
+    margin-top: 111px;
+    text-align:center;
+  }
+
+  .right {
+    padding: 30px 0;
+    text-align: right;
+    margin-top: 65px;
+    background: url(welcome-separator.gif) top left repeat-y;
+
+    img, select { padding-bottom: 15px; }
+  }
+
+  label {
+    font-size: 30px;
+    color: @paletteGrey;
+  }
+}
+
+

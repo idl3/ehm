@@ -7,21 +7,13 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body id="welcome">
 
 <div class="container">
-  <div class="row-fluid">
-    <div class="span12">
-      <%= yield %>
-    </div>
+  <div class="row-fluid welcome">
+    <%= yield %>
   </div>
 </div>
-
-Session:
-<p><%= debug(session) %></p>
-
-Params:
-<p><%= debug(params) %></p>
 
 </body>
 </html>

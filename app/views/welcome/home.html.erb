@@ -1,6 +1,13 @@
-CHOOSE YOUR CITY
+<div class="span4 left">
+  <img src="assets/welcome-logo.png" width="154" height="51" />
+</div>
 
-<%= form_tag root_path do %>
-  <%= collection_select(:initial_city, :id, City.all, :id, :name) %>
-  <%= submit_tag %>
-<% end %>
+<div class="span6 right">
+
+  <%= form_tag root_path do %>
+    <label>Επιλέξτε την πόλη σας:</label>
+    <%= collection_select(:initial_city, :id, City.all, :id, :name) %>
+    <br />
+    <%= submit_tag "Συνέχεια", class: "btn btn-success btn-large" %>
+  <% end %>
+</div>
