@@ -1,4 +1,6 @@
-<ul class="nav nav-pills nav-stacked">
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+
   <li <%= raw 'class="active"' unless params[:c] %>>
     <%= link_to "Όλες οι κατηγορίες", @vendor %>
   </li>
@@ -10,3 +12,4 @@
   <% end %>
 
 </ul>
+</div>
