@@ -6,5 +6,7 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
     @vendor = @offer.vendor
     @cities = @vendor.cities
+
+    @more_from_vendor = @vendor.offers.where("id != ?", params[:id] ).limit(5)
   end
 end

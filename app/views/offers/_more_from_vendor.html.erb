@@ -1,1 +1,17 @@
-more from this vendor huhu xaxa
+<div class="row-fluid">
+  <div class="span12">
+  <h4>Περισσοτερες προσφορες</h4>
+</div>
+</div>
+<% @more_from_vendor.each do |offer| %>
+<div class="row-fluid">
+  <div class="span12 side-offer">
+    <div class="inner">
+      <%= image_tag offer.image.url %>
+      <h5><%= offer.title %></h5>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
