@@ -39,6 +39,9 @@
 
 
 
+
+
+
 /*    GENERAL   */
 
 body {
@@ -53,6 +56,10 @@ h1, h2, h3, h4, h5, h6 { color: #888; }
 .breadcrumbs { margin-bottom: 15px; }
 
 a { color: @linksBlue; }
+
+
+
+
 
 
 
@@ -106,6 +113,9 @@ a { color: @linksBlue; }
   background: url(../assets/dropdown-arrow.png) no-repeat;
   padding-top: 1px;
 }
+
+
+
 
 
 
@@ -202,6 +212,10 @@ div.vendor h3 {
 
 
 
+
+
+
+
 /*     OFFERS NAV MENU (popular,expiring etc.)      */
 
 .offersnav {
@@ -227,6 +241,9 @@ div.vendor h3 {
 
 
 
+
+
+
 /*       OFFER PAGE (offers#show)       */
 
 
@@ -239,8 +256,15 @@ div.vendor h3 {
     padding-bottom: 9px;
   }
 
-  div#offer {
-   
+  div#offer-img {
+    img { border: 7px solid white;}
+  }
+
+  div#offer-info {
+    text-align: right;
+    #gradient > .vertical(@paletteBeige,@paletteGreen);
+    height: 200px;
+    border-radius: 4px;
   }
 
   .span3 {
@@ -264,6 +288,10 @@ div.vendor h3 {
   }
 
 }
+
+
+
+
 
 
 

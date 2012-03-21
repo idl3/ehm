@@ -11,7 +11,7 @@ class Admin::OffersController < Admin::AdminController
     @offer = current_user.offers.build(params[:offer])
     if @offer.save
       flash[:success] = "Offer created!"
-      redirect_to admin_offer_path(@offer)
+      redirect_to admin_offer_path @offer
     else
       render "new"
     end
