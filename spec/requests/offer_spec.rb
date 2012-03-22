@@ -2,8 +2,8 @@
 require 'spec_helper'
 
 describe "Offer page" do
-  let(:offer) { Offer.find(5) }
-  let(:city) { City.find(2) }
+  let(:city) { City.first }
+  let(:offer) { city.offers.first }
 
   before "select the city" do
     visit offer_path(offer)
@@ -16,14 +16,17 @@ describe "Offer page" do
     page.should have_content offer.vendor.name
   end
 
-  it "should display offers title" do
+  it "should display offer title" do
     page.should have_selector 'h1', text: offer.title
   end
 
-  it "should display start and expire date" do
-    page.should have_content offer.starts_on
-    page.should have_content offer.expires_on
-  end
+  # it "should display offer price" do
+  #   page.should have_content format_price(offer.price)
+  # end
+
+  # it "should display expiry date" do
+  #   page.should have_content offer.expires_on
+  # end
 
 
 end

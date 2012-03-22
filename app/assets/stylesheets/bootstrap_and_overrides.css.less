@@ -36,6 +36,10 @@
 
 .border-bottom { border-bottom: 1px solid @borderLightGrey; }
 
+.vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}
 
 
 
@@ -47,6 +51,7 @@
 body {
   background: @paletteGrey url(main-bg.gif) repeat;
   font-family: Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 h1 { font-size: 24px; }
@@ -61,6 +66,19 @@ a { color: @linksBlue; }
 
 
 
+/*          MISC                */
+.tabs-left .nav-tabs {
+  float:none;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+
+  .active a { color: #333; }
+  a { color: #999; }
+}
+
+.nav-tabs > li > a { padding-top: 12px; padding-bottom: 12px;}
 
 
 
@@ -76,12 +94,17 @@ a { color: @linksBlue; }
     margin-right: 30px;
   }
 
-  .city { font-size: 21px; }
-
   .vendor {
-    font-size: 15px;
-    margin-left: 40px;
+    font-size: 20px;
   }
+
+  .city {
+    font-size: 17px;
+    margin-left: 40px;
+
+    a.dropdown-toggle { color: #ddd; }
+  }
+
 
   .navbar-inner {
     height: 70px;
@@ -141,8 +164,7 @@ a { color: @linksBlue; }
     overflow: hidden;
 
     div {
-      display: table-cell;
-      vertical-align: middle;
+      .vertical-align;
     }
   }
 
@@ -150,25 +172,33 @@ a { color: @linksBlue; }
 
   .price {
     position: absolute;
-    width: 55px;
-    height: 55px;
     top: 15px;
     left: -10px;
-    background: url(../assets/price-bg.png) repeat-y;
-    text-align:center;
-    font-size: 17px;
-    color: white;
-    font-weight: bold;
+    text-align: center;
+    display: table;
+    .square(55px);
+    #gradient > .horizontal(#A1C436,#7E9B2B);
 
-    span {
-      display: block;
-      margin-top: 6px;
+
+    .price-inner {
+      .vertical-align;
     }
 
-    .initial {
-      font-size: 12px;
+    span.initial {
+      font-size: 14px;
       text-decoration: line-through;
       font-weight: normal;
+      font-weight: bold;
+      color: #627822;
+      .smaller { font-size: 12px; }
+    }
+
+    span.current {
+      display: block;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      .smaller { font-size: 14px; }
     }
   }
 
@@ -181,15 +211,17 @@ a { color: @linksBlue; }
 
   .discount {
     position: absolute;
-    background: url(../assets/discount-bg.png) repeat-x;
-    width: 29px;
-    height: 29px;
-    top:-13px;
+    top: -13px;
     right: -13px;
     font-size:11px;
     color: white;
     text-align:center;
-    padding-top: 6px;
+    display: table;
+    .square(29px);
+    #gradient > .vertical(#FF0000,#9D0000);
+
+    .discount-inner { .vertical-align(); }
+
   }
 }
 
@@ -260,13 +292,6 @@ div.vendor h3 {
     img { border: 7px solid white;}
   }
 
-  div#offer-info {
-    text-align: right;
-    #gradient > .vertical(@paletteBeige,@paletteGreen);
-    height: 200px;
-    border-radius: 4px;
-  }
-
   .span3 {
     background: white;
     .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.1))
@@ -285,6 +310,43 @@ div.vendor h3 {
   .side-offer {
     margin-top: 5px;
     .inner { padding:15px; }
+  }
+
+  #offer-price {
+    #gradient > .vertical(#4DB8FF,#4098D3);
+    .border-radius(5px);
+    .box-shadow(0 1px 3px rgba(0,0,0,.25));
+
+    width:  130px;
+    height: 115px;
+    display: table;
+
+    .inner {
+      text-align: right;
+      padding: 20px;
+      .vertical-align;
+    }
+
+    .price {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      display: block;
+      text-shadow: 1px 1px black;
+
+      .smaller { font-size:20px;}
+    }
+
+    .initial-price {
+      margin-top: 10px;
+      font-size: 20px;
+      text-decoration: line-through;
+      color: #1F5170;
+      display: block;
+      font-weight: bold;
+
+      .smaller { font-size: 15px;}
+    }
   }
 
 }
@@ -319,7 +381,7 @@ body#welcome {
     margin-top: 65px;
     background: url(welcome-separator.gif) top left repeat-y;
 
-    img, select { padding-bottom: 15px; }
+    select { margin: 15px 0; }
   }
 
   label {

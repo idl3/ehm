@@ -10,12 +10,16 @@
       </div>
 
       <div class="price">
-        <span class="initial"><%= offer.initial_price %></span>
-        <span><%= offer.price %></span>
+        <div class="price-inner">
+        <span class="initial"><%= format_price(offer.initial_price) %></span>
+        <span class="current"><%= format_price(offer.price) %></span>
+      </div class="price-inner">
       </div>
 
       <div class="discount">
-        -35%
+        <div class="discount-inner">
+          -35%
+        </div>
       </div>
 
       <h2>

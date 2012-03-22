@@ -18,8 +18,8 @@ class CitiesController < ApplicationController
   protected
 
   def set_cookie
-    if params.has_key?(:initial_city)
-      cookies[:city_id] = City.find(params[:initial_city][:id])
+    if params.has_key?(:selected_city)
+      cookies[:city_id] = City.find(params[:selected_city][:id])
     elsif params.has_key?(:city)
       cookies[:city_id] = City.find_by_name(params[:city]).id
     end

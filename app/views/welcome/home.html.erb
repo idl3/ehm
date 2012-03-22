@@ -6,7 +6,7 @@
 
   <%= form_tag root_path do %>
     <label>Επιλέξτε την πόλη σας:</label>
-    <%= collection_select(:initial_city, :id, City.all, :id, :name) %>
+    <%= collection_select(:selected_city, :id, City.all, :id, :name) %>
     <br />
     <%= submit_tag "Συνέχεια", class: "btn btn-success btn-large" %>
   <% end %>

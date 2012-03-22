@@ -37,7 +37,7 @@ describe Offer do
   end
 
   describe "when title is too long" do
-    before { @offer.title = "a" * 26 }
+    before { @offer.title = "a" * 41 }
     it { should_not be_valid }
   end
 
