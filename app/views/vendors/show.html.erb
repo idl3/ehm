@@ -1,4 +1,10 @@
 <% provide :sidebar, 'categories' %>
 <% provide :title, @vendor.name %>
 
+<!-- <div class="row-fluid">
+  <div class="span12">
+    <h1>Προσφορές από <%= @vendor.name %></h1>
+  </div>
+</div> -->
+
 <%= render partial: "offers/offers", object: @offers %>

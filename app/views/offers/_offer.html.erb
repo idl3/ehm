@@ -30,8 +30,10 @@
     <% end %>
   </div>
 
+  <% unless controller_name == 'vendors' %>
   <div class="vendor">
     <h3><%= link_to offer.vendor.name, vendor_path(offer.vendor) %></h3>
   </div>
+  <% end %>
 
 </div>

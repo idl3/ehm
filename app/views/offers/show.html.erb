@@ -4,7 +4,7 @@
 <div class="row-fluid">
   <div class="span12 offer-title">
     <h1><%= @offer.title %></h1>
-    <h2 class="vendor">από <%= @offer.vendor.name %></h2>
+    <h2 class="vendor">από <%= link_to @offer.vendor.name, vendor_path(@offer.vendor) %></h2>
   </div>
 </div>
 
@@ -15,24 +15,48 @@
   </div>
 
   <div class="span7">
-    <div class="row-fluid">
-      <div class="span6" id="offer-price">
+
+    <div class="row-fluid" id="offer-value">
+      <div class="span4" id="offer-price">
         <div class="inner">
           <span class="price"><%= format_price(@offer.price) %></span>
           <span class="initial-price">από <%= format_price(@offer.initial_price) %></span>
         </div>
       </div>
 
-      <div class="span6" id="offer-info">
-        offer.
+      <div class="span8" id="offer-info">
+        <div class="row-fluid">
+          <div class="span6 info-section left">
+            <div class="inner">
+              <h5>έκπτωση</h5>
+              <%= discount(@offer.price, @offer.initial_price) %>
+            </div>
+          </div>
+
+          <div class="span6 info-section right">
+            <div class="inner">
+              <h5>κερδίζετε</h5>
+              <%= win(@offer.price, @offer.initial_price) %>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <div class="row-fluid" id="offer-expiry">
+      <div class="span12">
+        <hr />
+        H προσφορά λήγει: <span style="font-size: 20px"><%= @offer.expires_on  %></span>
+        <hr />
+      </div>
+    </div>
+
+    <div class="row-fluid" id="offer-share">
+      <span class="recommend"><a href="#">Προτείνετέ το σε φίλο</a><br /></span>
+      <span class="share">Μοιραστείτε το: <a href="#">Facebook, Twitter, Google+</a></span>
+    </div>
+
   </div>
 
-</div>
-
-<div class="row-fluid">
-  <div class="span12">
-    share this
-  </div>
 </div>

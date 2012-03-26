@@ -1,19 +1,19 @@
 <%= form_for [:admin, @offer] do |f| %>
 <%= render 'admin/shared/error_messages', object: f.object %>
 
-  <%= f.label :title %><br />
-  <%= f.text_field :title %><br /><br />
+  <%= f.label :title %>
+  <%= f.text_field :title %>
 
-  <%= f.label :price %><br />
-  <%= f.text_field :price %><br />
+  <%= f.label :price %>
+  <%= f.text_field :price %>
 
-  <%= f.label :initial_price %><br />
-  <%= f.text_field :initial_price %><br />
+  <%= f.label :initial_price %>
+  <%= f.text_field :initial_price %>
 
-  <%= f.label "Ξεκινά στις:" %><br />
+  <%= f.label "Ξεκινά στις:" %>
   <%= date_select :offer, :starts_on %>
 
-  <%= f.label "Λήγει στις:" %><br />
+  <%= f.label "Λήγει στις:" %>
   <%= date_select :offer, :expires_on %>
 
   <%= f.label "Εικόνα" %>
