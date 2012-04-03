@@ -61,7 +61,7 @@ def make_vendors
 end
 
 def make_offers
-  dir = 'app/tmp/sample-img/'
+  dir = File.join(Rails.root, 'tmp', 'sample-img/')
 
   Vendor.all.each do |vendor|
     vendor.offers.create! title: 'Ελαιόλαδο Άλτις 1000γρ.',
