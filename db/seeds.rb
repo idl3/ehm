@@ -8,18 +8,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(title: 'Αλλαντικά')
-Category.create(title: 'Κρεατικά')
-Category.create(title: 'Χυμοί - Αναψυκτικά')
-Category.create(title: 'Γλυκά')
-Category.create(title: 'Είδη περιποίησης')
-
-Category.create(title: 'Γαλακτοκομικά')
-Category.create(title: 'Γλυκά')
-Category.create(title: 'Είδη μπάνιου')
-Category.create(title: 'Ζυμαρικά')
-Category.create(title: 'Είδη μαγειρικής')
-Category.create(title: 'Κατεψυγμένα')
+Category.create title: 'Γαλακτοκομικά'
+Category.create title: 'Αλλαντικά'
+Category.create title: 'Δημητριακά'
+Category.create title: 'Ζυμαρικά'
+Category.create title: 'Είδη μαγειρικής'
+Category.create title: 'Χυμοί - Αναψυκτικά'
+Category.create title: 'Γλυκά'
+Category.create title: 'Είδη περιποίησης'
+Category.create title: 'Είδη περιποίησης1'
+Category.create title: 'Είδη περιποίησης2'
+Category.create title: 'Είδη περιποίησης3'
 
 City.create(name: 'Αθήνα')
 City.create(name: 'Θεσσαλονίκη')
