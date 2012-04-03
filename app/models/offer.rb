@@ -6,12 +6,13 @@ class Offer < ActiveRecord::Base
 
   has_attached_file :image,
                     styles: { thumb: '150x150>', normal: '250x250>' },
-                    :storage => :s3,
-                    :bucket =>  'ENV['S3_BUCKET_NAME']',
-                    :s3_credentials => {
-                      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-                      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-                    }
+                    storage: :s3,
+                    bucket:  'shoply',
+                    s3_credentials: {
+                      access_key_id: 'AKIAJS5LXFFIXGEZFL3A',
+                      secret_access_key: '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'
+                    },
+                    s3_host_name: 's3-eu-west-1.amazonaws.com'
 
   validates :vendor_id, presence: true
   validates :category_id, presence: true
