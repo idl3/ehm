@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %> - ιδέα.gr</title>
+  <title><%= yield :title %> - Shoply</title>
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -26,11 +26,11 @@
 <div class="row-fluid" id="footer">
   <hr />
   <div class="span5">
-    To Shoply είναι μία πλατφόρμα αναζήτησης για τις προσφορές των Supermarkets της Ελλάδας.
+    
   </div>
 
   <div class="span6">
-    dasadsdsa
+    
   </div>
 </div>
 
@@ -38,7 +38,7 @@
 </div>
 
 
-
+<% if Rails.env.development? %>
 Session:
 <p><%= debug(session) %></p>
 
@@ -47,6 +47,7 @@ Params:
 
 Cookies:
 <p><%= debug(cookies) %></p>
+<% end %>
 
 
 </body>
