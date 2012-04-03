@@ -82,7 +82,7 @@ def make_offers
                            image: File.open(dir + 'galopoula.jpg'),
                            category_id: Category.find_by_title('Αλλαντικά').id
 
-    vendor.offers.create! title: 'Σοκολάτα Lacta απλή (3τμχ.)',
+    vendor.offers.create! title: 'Σοκολάτα Lacta απλή 3τμχ.',
                          price: 2.25, initial_price: 4.65,
                          starts_on: Date.current.yesterday, expires_on: Date.current + 4,
                          image: File.open(dir + 'sokolata.jpg'),
@@ -100,7 +100,7 @@ def make_offers
                          image: File.open(dir + 'giaourti.jpg'),
                          category_id: Category.find_by_title('Γαλακτοκομικά').id
 
-    vendor.offers.create! title: 'Αλεύρι Μύλοι Κρήτης (για όλες τις χρήσεις) 300γρ.',
+    vendor.offers.create! title: 'Αλεύρι Μύλοι Κρήτης για όλες τις χρήσεις 300γρ.',
                          price: 4.22, initial_price: 5.43,
                          starts_on: Date.current.yesterday, expires_on: Date.current + 4,
                          image: File.open(dir + 'aleuri.jpg'),
