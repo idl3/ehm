@@ -13,7 +13,7 @@ class Admin::OffersController < Admin::AdminController
       flash[:success] = "Offer created!"
       redirect_to admin_offer_path @offer
     else
-      render "new"
+      render 'new'
     end
   end
 

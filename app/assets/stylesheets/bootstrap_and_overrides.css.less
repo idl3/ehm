@@ -49,12 +49,12 @@
 /*    GENERAL   */
 
 body {
-  background: @paletteGrey url(main-bg.gif) repeat;
+  background: @paletteGrey;
   font-family: 'Helvetica Neue' ,Helvetica, Arial, sans-serif;
   color: #888;
 }
 
-h1 { font-size: 24px; }
+h1 { font-size: 25px; }
 h2 { font-size: 16px; }
 h1, h2, h3, h4, h5, h6 { color: #888; }
 
@@ -69,6 +69,10 @@ a {
 
 .container-main { margin-top: 83px;}
 
+#footer {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
 
 
 
@@ -86,6 +90,22 @@ a {
 }
 
 .nav-tabs > li > a { padding-top: 12px; padding-bottom: 12px;}
+
+#vendors-bar {
+  text-align: center;
+
+  h4 {
+    font-weight: normal;
+    color: #999;
+    text-shadow: -1px 0px 1px white;
+    font-size: 17px;
+    margin-top: 40px;
+  }
+}
+
+.btn-large { padding: 14px 96px; }
+
+
 
 
 
@@ -218,9 +238,10 @@ a {
   }
 }
 
-div.vendor h3 {
-  font-size: 12px;
+div.vendor h3 a {
+  font-size: 13px;
   margin-left: 3px;
+  font-weight: normal;
 }
 
 .row-offers {
@@ -388,7 +409,6 @@ div.vendor h3 {
   }
 
 }
-
 
 
 

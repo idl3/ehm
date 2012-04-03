@@ -4,6 +4,7 @@ class VendorsController < ApplicationController
   def show
     category = params[:c]
     @vendor = Vendor.find(params[:vendor])
+
     if category
       @offers = @vendor.offers.where("category_id = #{category}")
     else

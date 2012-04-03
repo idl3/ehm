@@ -41,13 +41,14 @@
           </div>
         </div>
 
+
       </div>
     </div>
 
     <div class="row-fluid" id="offer-expiry">
       <div class="span12">
         <hr />
-        H προσφορά λήγει: <span style="font-size: 20px"><%= @offer.expires_on  %></span>
+        Λήγει σε: <span style="font-size: 20px"><%= distance_of_time_in_words(Time.now, @offer.expires_on + 1)  %></span>
         <hr />
       </div>
     </div>

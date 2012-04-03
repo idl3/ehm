@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= yield :title %> - ιδέα.gr</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -20,16 +20,33 @@
       <%= yield %>
     </div>
   </div>
+
+  <%= render 'shared/vendors_bar' if controller_name == 'cities' %>
+
+<div class="row-fluid" id="footer">
+  <hr />
+  <div class="span5">
+    To Shoply είναι μία πλατφόρμα αναζήτησης για τις προσφορές των Supermarkets της Ελλάδας.
+  </div>
+
+  <div class="span6">
+    dasadsdsa
+  </div>
 </div>
 
-Session:
-<p><%= debug(session) %></p>
 
-Params:
-<p><%= debug(params) %></p>
+</div>
 
-Cookies:
-<p><%= debug(cookies) %></p>
+
+
+<!-- Session:
+<p><%= debug(session) %></p> -->
+
+<!-- Params:
+<p><%= debug(params) %></p> -->
+
+<!-- Cookies:
+<p><%= debug(cookies) %></p> -->
 
 
 </body>
