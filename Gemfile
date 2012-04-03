@@ -6,6 +6,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'date_validator', '~> 0.6.3'
 gem 'paperclip', '~> 2.7'
 gem 'aws-s3'
+gem 'aws-sdk'
 gem 'will_paginate', '~> 3.0'
 
 group :test do
