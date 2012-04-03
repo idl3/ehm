@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
-
 gem 'date_validator', '~> 0.6.3'
 gem 'paperclip', '~> 2.7'
+gem 'aws-s3'
 gem 'will_paginate', '~> 3.0'
 
 group :test do
