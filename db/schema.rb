@@ -32,11 +32,11 @@ ActiveRecord::Schema.define(:version => 20120312165644) do
 
   create_table "offers", :force => true do |t|
     t.string   "title"
-    t.decimal  "price"
+    t.decimal  "price",              :precision => 5, :scale => 2
     t.integer  "vendor_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.decimal  "initial_price"
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.decimal  "initial_price",      :precision => 5, :scale => 2
     t.date     "starts_on"
     t.date     "expires_on"
     t.string   "image_file_name"
