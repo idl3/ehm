@@ -5,10 +5,11 @@
   </a>
 
   <ul class="dropdown-menu">
-    <% if (params[:controller] == 'vendors' || params[:controller] == 'offers') && stored_city? %>
+    <% unless session[:vendor_id].nil? %>
     <li><%= link_to "Όλα τα Supermarkets", city_path(current_city) %></li>
      <li class="divider"></li>
     <% end %>
+
     <% all_vendors.each do |vendor| %>
       <% unless vendor.name == current_vendor_name %>
         <li><%= link_to vendor.name, vendor %></li>
