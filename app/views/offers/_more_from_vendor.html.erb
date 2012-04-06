@@ -1,1 +1,51 @@
-more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />more offers<br />
+<div class="row-fluid" id="more-from-vendor">
+  <h4>Περισσότερες προσφορές</h4><br />
+
+  <% @more_from_vendor.each_slice(4) do |offers_for_row| %>
+    <div class="row-fluid row-offers">
+      <% offers_for_row.each do |offer| %>
+          <div class="span3">
+              <div class="offer">
+    <%= link_to offer do %>
+    <div class="inner">
+
+      <div class="image">
+        <div>
+          <%= image_tag offer.image.url :thumb %>
+        </div>
+      </div>
+
+      <div class="price">
+        <div class="price-inner">
+        <span class="initial"><%= format_price(offer.initial_price) %></span>
+        <span class="current"><%= format_price(offer.price) %></span>
+      </div class="price-inner">
+      </div>
+
+      <div class="discount">
+        <div class="discount-inner">
+          -35%
+        </div>
+      </div>
+
+      <h2>
+        <%= offer.title %>
+      </h2>
+
+    </div>
+    <% end %>
+  </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% unless controller_name == 'vendors' || controller_name == 'offers' %>
+  <div class="vendor">
+    <h3><%= link_to offer.vendor.name, vendor_path(offer.vendor) %></h3>
+  </div>
+  <% end %>
+
+</div>
+
+</div>

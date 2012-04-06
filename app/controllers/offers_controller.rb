@@ -7,6 +7,6 @@ class OffersController < ApplicationController
     @vendor = @offer.vendor
     @cities = @vendor.cities
 
-    @more_from_vendor = @vendor.offers.where("id != ?", params[:id]).limit(5)
+    @more_from_vendor = @vendor.offers.where("id != ?", params[:id]).limit(8)
   end
 end
