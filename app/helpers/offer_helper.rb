@@ -10,7 +10,7 @@ module OfferHelper
   end
 
   def format_price(price)
-    price = price.to_s
+    price = sprintf("%5.2f", price)
     if price =~ /\./
       raw price.gsub('.', '<span class="smaller">,') + '€</span>' # => take this to database level (localization)
     else

@@ -10,18 +10,46 @@
 
 <%= render 'shared/navbar' %>
 
-<div class="container offers container-main" id="offers">
+<div class="container container-main" id="offers">
   <div class="row-fluid">
+
+
+
     <div class="span9" id="offer">
-      <%= yield %>
+      <div class="row-fluid">
+        <%= yield %>
+      </div>
+
+      <div class="row-fluid">
+        <div class="span9">
+          <%= render 'more_from_vendor' %>
+        </div>
+      </div>
     </div>
 
-    <%= render content_for :sidebar %>
+    <div class="span3">
+      <br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar<br />sidebar <br />sidebar
+      <% # render some sidebar partial %>
+    </div>
+
+
+
+
 
   </div>
 </div>
 
- <% if Rails.env.development? %>
+
+
+
+
+
+
+
+
+
+
+<% if Rails.env.development? %>
 Session:
 <p><%= debug(session) %></p>
 
