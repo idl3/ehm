@@ -19,6 +19,8 @@ end
 
 group :production do
   gem 'pg'
+  gem 'aws-s3'
+  gem 'aws-sdk'
 end
 
 group :assets do
