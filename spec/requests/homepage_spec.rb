@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 describe "Homepage" do
-  let(:city) { City.find(2) }
+  let(:city) { City.first }
   before { visit root_path }
 
   describe "as new user (cookie not set)" do
@@ -17,8 +17,14 @@ describe "Homepage" do
         click_button "Συνέχεια"
 
         current_path.should == root_path
-        page.should have_selector 'title', text: city.name
+        page.should have_css 'a.dropdown-toggle', text: city.name
+        page.should have_css 'a.dropdown-toggle', text: 'Όλα τα Supermarkets'
       end
+
+      it "displays offers from different vendors" do
+        
+      end
+
     end
   end
 

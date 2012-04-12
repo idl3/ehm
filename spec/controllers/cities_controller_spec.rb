@@ -14,7 +14,7 @@ describe CitiesController do
 
     describe "with city cookie set" do
       it "lists all offers from stored city" do
-        cookies[:city_id] = 2
+        cookies[:city_id] = 1
         get :show
         response.should be_success
         response.should render_template 'show'
@@ -23,5 +23,4 @@ describe CitiesController do
     end
 
   end
-
 end

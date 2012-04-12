@@ -28,5 +28,8 @@ describe "Offer page" do
   #   page.should have_content offer.expires_on
   # end
 
+  # should display value, discount & quantity
+  # should render more offers from vendor
+
 
 end

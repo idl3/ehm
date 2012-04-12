@@ -17,8 +17,4 @@ class Offer < ActiveRecord::Base
   default_scope where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current).limit(12)
 
   self.per_page = 12
-
-  def self.expiring_soon
-    Offer.where("expires_on = ? OR expires_on = ?", Date.current, Date.current.tomorrow)
-  end
 end
