@@ -30,8 +30,3 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'less'
 end
-
-# gem 'bootstrap-sass', '~> 2.0.1'
-# gem 'faker', '1.0.1'
-# gem "rmagick"
-# gem 'haml'
