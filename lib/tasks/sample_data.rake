@@ -155,7 +155,3 @@ def connect_vendors_to_cities
     Vendor.find(n+1).cities << City.all
   end
 end
-
-def offers_for(vendor)
-
-end

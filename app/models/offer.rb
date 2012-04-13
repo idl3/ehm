@@ -14,7 +14,8 @@ class Offer < ActiveRecord::Base
   validates :starts_on, presence: true, date: { after: Date.current.prev_year, message: "Too old!" }
   validates :expires_on, presence: true, date: { after: :starts_on, message: "Must be after the starting date" }
 
-  default_scope where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current).limit(12)
-
-  self.per_page = 12
+  scope :active,   lambda { where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current) }
+  scope :expiring, lambda { where("starts_on <= ? AND expires_on <= ?", Date.current, Date.tomorrow) }
+  # scope :best_offers
+  # scope :coming_soon
 end
