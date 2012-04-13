@@ -6,9 +6,9 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find_by_username(params[:vendor])
 
     if category
-      @offers = @vendor.offers.where("category_id = #{category}")
+      @offers = @vendor.offers.active.where("category_id = #{category}")
     else
-      @offers = @vendor.offers
+      @offers = @vendor.offers.active
     end
     store_vendor
   end

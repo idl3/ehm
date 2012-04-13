@@ -7,9 +7,9 @@ class CitiesController < ApplicationController
     @city = City.find(cookies[:city_id])
 
     if params[:c]
-      @offers = @city.offers.where("category_id = #{params[:c]}")
+      @offers = @city.offers.active.where("category_id = #{params[:c]}")
     else
-      @offers = @city.offers
+      @offers = @city.offers.active
     end
 
     cookies[:city_id] = @city.id
