@@ -16,6 +16,8 @@ class Offer < ActiveRecord::Base
 
   scope :active,   lambda { where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current) }
   scope :expiring, lambda { where("starts_on <= ? AND expires_on <= ?", Date.current, Date.tomorrow) }
-  # scope :best_offers
-  # scope :coming_soon
+  # some more scopes
+
+  self.per_page = 10
+
 end
