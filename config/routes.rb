@@ -6,9 +6,9 @@ Deals::Application.routes.draw do
   match '/:city'          =>      'Cities#show'
   match '/v/:vendor'      =>      'Vendors#show'
 
-  resources :vendors,     path: 'v',    only: [:index, :show]
-  resources :offers,                    only: [:index, :show]
-  resources :cities,      path: '/',    only: [:show]
+  resources :vendors,     path: 'v',    only: :show
+  resources :offers,                    only: :show
+  resources :cities,      path: '/',    only: :show
 
   namespace :admin do
     match '/login',       to:     'Sessions#new'
