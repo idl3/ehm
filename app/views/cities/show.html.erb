@@ -1,6 +1,8 @@
 <% provide :sidebar, 'categories' %>
 <% title @city.name %>
 
-<%= render partial: "offers/offers", object: @offers %>
+<%= render 'offers/sortby_links' %>
+
+<%= render partial: 'offers/offers', object: @offers %>
 
 <%= will_paginate @offers %>
