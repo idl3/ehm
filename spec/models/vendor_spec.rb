@@ -1,10 +1,8 @@
 # require 'spec_helper'
 
 # describe Vendor do
-#   before(:each) do
-#     @vendor = Vendor.new(name: "Example Vendor", email: "vendor@example.gr", username: "example",
-#                           password: "foobar", password_confirmation: "foobar" )
-#   end
+#   before { @vendor = Vendor.new(name: "Example Vendor", email: "vendor@example.gr", username: "example",
+#                           password: "foobar", password_confirmation: "foobar" ) }
 
 #   subject { @vendor }
 
