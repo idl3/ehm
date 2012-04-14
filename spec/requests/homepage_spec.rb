@@ -22,16 +22,6 @@ describe "Homepage" do
         should have_css 'a.dropdown-toggle', text: city.name
         should have_css 'a.dropdown-toggle', text: 'Όλα τα Supermarkets'
       end
-
-      it "displays offers from different vendors" do
-      end
-    end
-
-    describe "after choosing a category" do
-      it "should take you to the category page inside the selected city"
-        
-      end
     end
   end
-
 end
