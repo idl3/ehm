@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  before_filter :set_cookie
+  before_filter :set_cookie_and_params
   before_filter :redirect_if_no_cookie
   before_filter :reset_vendor
 
@@ -14,12 +14,14 @@ class CitiesController < ApplicationController
   end
 
   protected
-  def set_cookie
+  def set_cookie_and_params
     if params.has_key?(:selected_city) # then he's coming from the welcome page
       cookies[:city_id] = City.find(params[:selected_city][:id]).id
     elsif params.has_key?(:id)
       cookies[:city_id] = params[:id]
     end
+
+    params[:id] = cookies[:city_id]
   end
 
 end
