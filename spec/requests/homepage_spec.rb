@@ -14,7 +14,7 @@ describe "Homepage" do
     end
 
     describe "after choosing city" do
-      it "takes you to the homepage" do
+      it "takes you to the homepage with the selected city set" do
         select city.name
         click_button "Συνέχεια"
 
@@ -25,7 +25,12 @@ describe "Homepage" do
 
       it "displays offers from different vendors" do
       end
+    end
 
+    describe "after choosing a category" do
+      it "should take you to the category page inside the selected city"
+        
+      end
     end
   end
 
