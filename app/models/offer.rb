@@ -19,5 +19,4 @@ class Offer < ActiveRecord::Base
   # some more scopes
 
   self.per_page = 10
-
 end

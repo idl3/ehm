@@ -6,8 +6,4 @@ class Vendor < ActiveRecord::Base
   has_and_belongs_to_many :cities, uniq: true
 
   has_secure_password
-
-  def to_param
-    username
-  end
 end

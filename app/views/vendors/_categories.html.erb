@@ -7,7 +7,7 @@
 
   <% vendor_categories.each do |category| %>
   <li <%= raw 'class="active"' if active_category?(category) %>>
-    <%= link_to category.title, @vendor.username + "?c=" + category.id.to_s %>
+    <%= link_to category.title, c: category.id %>
   </li>
   <% end %>
 

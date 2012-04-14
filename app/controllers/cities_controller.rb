@@ -15,17 +15,12 @@ class CitiesController < ApplicationController
     cookies[:city_id] = @city.id
   end
 
-  def expiring
-
-  end
-
   protected
-
   def set_cookie
-    if params.has_key?(:selected_city)
+    if params.has_key?(:selected_city) # this is if he's coming from the welcome page
       cookies[:city_id] = City.find(params[:selected_city][:id])
-    elsif params.has_key?(:city)
-      cookies[:city_id] = City.find_by_name(params[:city]).id
+    elsif params.has_key?(:id)
+      cookies[:city_id] = params[:id]
     end
   end
 

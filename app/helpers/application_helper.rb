@@ -2,7 +2,7 @@
 
 module ApplicationHelper
   def vendor_categories
-    Vendor.find_by_username(params[:vendor]).categories.all
+    Vendor.find(params[:id]).categories.all
   end
 
   def city_categories
