@@ -1,5 +1,6 @@
 class OffersController < ApplicationController
   before_filter :redirect_if_no_cookie
+
   layout 'offer'
 
   def show

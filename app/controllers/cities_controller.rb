@@ -11,14 +11,12 @@ class CitiesController < ApplicationController
     else
       @offers = @city.offers.active.paginate(:page => params[:page])
     end
-
-    cookies[:city_id] = @city.id
   end
 
   protected
   def set_cookie
-    if params.has_key?(:selected_city) # this is if he's coming from the welcome page
-      cookies[:city_id] = City.find(params[:selected_city][:id])
+    if params.has_key?(:selected_city) # then he's coming from the welcome page
+      cookies[:city_id] = City.find(params[:selected_city][:id]).id
     elsif params.has_key?(:id)
       cookies[:city_id] = params[:id]
     end
