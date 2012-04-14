@@ -3,8 +3,8 @@ Deals::Application.routes.draw do
 
   match '/welcome'        =>      'Welcome#home'
   match '/admin'          =>      'Admin::Pages#index'
-  match '/:city'          =>      'Cities#show'
-  match '/v/:vendor'      =>      'Vendors#show'
+  match '/:city'          =>      'Cities#show',          as: :city
+  match '/v/:vendor'      =>      'Vendors#show',         as: :vendor
 
   resources :vendors,     path: 'v',    only: :show
   resources :offers,                    only: :show

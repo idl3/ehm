@@ -13,6 +13,10 @@ class VendorsController < ApplicationController
     store_vendor
   end
 
+  def expiring
+    
+  end
+
   private
 
   def store_vendor

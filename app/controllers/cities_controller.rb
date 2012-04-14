@@ -15,6 +15,10 @@ class CitiesController < ApplicationController
     cookies[:city_id] = @city.id
   end
 
+  def expiring
+
+  end
+
   protected
 
   def set_cookie
