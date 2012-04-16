@@ -1,0 +1,801 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"city",
+				"City"
+			],
+			[
+				"vertical",
+				"vertical-align"
+			],
+			[
+				"verti",
+				"vertical-align"
+			],
+			[
+				"paletteGr",
+				"paletteGreen"
+			],
+			[
+				"palette",
+				"paletteDarkBlue"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"vend",
+				"vendor_id"
+			],
+			[
+				"store_city",
+				"store_city"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"all",
+				"all	all? { |e| .. }"
+			],
+			[
+				"nil",
+				"nil"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"vendors",
+				"vendors"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"follo",
+				"following"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"us",
+				"usai	usage_if()"
+			],
+			[
+				"Help",
+				"Help"
+			],
+			[
+				"C",
+				"Contact"
+			],
+			[
+				"month",
+				"month"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/app/controllers/projects_controller.rb",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/app/views/projects/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 60,
+				"line_ending": "Unix",
+				"name": "<%= @project.name %>"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/app/views/projects/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 173,
+				"line_ending": "Unix",
+				"name": "xe"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/spec/integration/creating_projects_spec.rb",
+			"settings":
+			{
+				"buffer_size": 680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 443,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 186,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/kontext/Desktop/Ticketee/Gemfile",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"Snippet: ",
+				"Snippet: module .. end"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tab ",
+				"View: Toggle Tabs"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kontext/Desktop/Ticketee/app/models/project.rb",
+		"/Users/kontext/Desktop/Ticketee/spec/models/project_spec.rb",
+		"/Users/kontext/Desktop/Ticketee/app/views/projects/index.html.erb",
+		"/Users/kontext/Desktop/Ticketee/Gemfile",
+		"/Users/kontext/Desktop/Ticketee/config/routes.rb",
+		"/Users/kontext/Desktop/Ticketee/spec/integration/creating_projects_spec.rb",
+		"/Users/kontext/Desktop/Ticketee/db/migrate/20120416022341_create_projects.rb",
+		"/Users/kontext/Desktop/Ticketee/app/controllers/projects_controller.rb",
+		"/Users/kontext/Desktop/deals/Gemfile",
+		"/Users/kontext/Desktop/Ticketee/app/views/layouts/application.html.erb",
+		"/Users/kontext/Desktop/deals/config/routes.rb",
+		"/Users/kontext/Desktop/deals/app/controllers/vendors_controller.rb",
+		"/Users/kontext/Desktop/deals/app/controllers/welcome_controller.rb",
+		"/Users/kontext/Desktop/deals/app/controllers/cities_controller.rb",
+		"/Users/kontext/Desktop/deals/app/models/offer.rb",
+		"/Users/kontext/Desktop/deals/spec/requests/homepage_spec.rb",
+		"/Users/kontext/Desktop/deals/app/views/cities/_categories.html.erb",
+		"/Users/kontext/Desktop/deals/app/assets/javascripts/offers.js.coffee",
+		"/Users/kontext/Desktop/deals/app/views/cities/show.js.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_offers.js.erb",
+		"/Users/kontext/Desktop/deals/app/views/cities/show.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_offers.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/offers_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/application.html.erb",
+		"/Users/kontext/Desktop/deals/spec/models/vendor_spec.rb",
+		"/Users/kontext/Desktop/deals/app/models/vendor.rb",
+		"/Users/kontext/Desktop/deals/app/models/city.rb",
+		"/Users/kontext/Desktop/deals/app/views/vendors/_categories.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_vendor_dropdown.html.erb",
+		"/Users/kontext/Desktop/deals/app/helpers/application_helper.rb",
+		"/Users/kontext/Desktop/deals/app/views/vendors/show.html.erb",
+		"/Users/kontext/Desktop/deals/spec/models/offer_spec.rb",
+		"/Users/kontext/Desktop/deals/app/assets/stylesheets/bootstrap_and_overrides.css.less",
+		"/Users/kontext/Desktop/deals/app/views/shared/_vendors_bar.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_logo.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_offer.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/show.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/offer.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_navbar.html.erb",
+		"/Users/kontext/Desktop/deals/config/initializers/time_formats.rb",
+		"/Users/kontext/Desktop/deals/app/helpers/menu_helper.rb",
+		"/Users/kontext/Desktop/deals/app/helpers/offer_helper.rb",
+		"/Users/kontext/Desktop/deals/db/development.sqlite3",
+		"/Users/kontext/Desktop/deals/db/migrate/20120326130306_add_discount_to_offers.rb",
+		"/Volumes/Resources/misc/Backup-codes-corestudiosinc.txt",
+		"/Users/kontext/Desktop/deals/spec/requests/offer_spec.rb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_city_dropdown.html.erb",
+		"/Users/kontext/Desktop/deals/spec/support/utilities.rb",
+		"/Users/kontext/Desktop/deals/app/helpers/session_helper.rb",
+		"/Users/kontext/Desktop/deals/app/controllers/application_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/welcome/home.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/pages/index.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/pages/settings.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/vendors/edit.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/vendors_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/admin.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/shared/_navbar.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/sessions/new.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/offers_controller.rb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/admin_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/welcome.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/pages_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_more_from_vendor.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_more_offers.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_more_offers_from_vendor.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_sortby_links.html.erb",
+		"/Users/kontext/Desktop/deals/lib/tasks/test_seed.rake",
+		"/Users/kontext/Desktop/deals/spec/factories.rb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/Find Results",
+		"/Users/kontext/Desktop/deals/app/views/offers/_breadcrumbs.html.erb",
+		"/Users/kontext/Desktop/deals/db/seeds.rb",
+		"/Users/kontext/Desktop/deals/lib/tasks/sample_data.rake",
+		"/Users/kontext/Library/Application Support/Sublime Text 2/Packages/User/CSS.sublime-settings",
+		"/Users/kontext/Desktop/deals/spec/controllers/cities_controller_spec.rb",
+		"/Users/kontext/Desktop/deals/app/views/main/welcome.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/offers/new.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/main_controller.rb",
+		"/Users/kontext/Desktop/deals/spec/models/city_spec.rb",
+		"/Users/kontext/Desktop/toolbox/names.rb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_vendor.html.erb",
+		"/Users/kontext/Desktop/deals/spec/spec_helper.rb",
+		"/Users/kontext/Desktop/deals/app/models/category.rb",
+		"/Users/kontext/Desktop/deals/.rspec",
+		"/Users/kontext/Desktop/deals/db/schema.rb",
+		"/Users/kontext/Downloads/xld-gui-20120226/CLI/HOWTO.txt",
+		"/Users/kontext/Desktop/deals/app/views/cities/home.html.erb",
+		"/Users/kontext/Desktop/deals/.gitignore",
+		"/Users/kontext/Desktop/deals/config/environments/development.rb",
+		"/Users/kontext/Desktop/deals/config/environments/test.rb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_welcome_message.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/categories/show.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/test",
+		"/Users/kontext/Desktop/idea.sublime-project",
+		"/Users/kontext/Desktop/core studios/css/ie.css",
+		"/Users/kontext/Desktop/deals/TODO.rb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_welcome_alert.html.erb",
+		"/Users/kontext/Desktop/deals/app/assets/stylesheets/application.scss",
+		"/Users/kontext/Desktop/deals/app/views/cities/select_city.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/main_controller.rb",
+		"/Users/kontext/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kontext/Desktop/deals/README.rdoc",
+		"/Users/kontext/Desktop/deals/README.md",
+		"/Users/kontext/Desktop/deals/app/controllers/categories_controller.rb",
+		"/Users/kontext/Desktop/deals/db/migrate/20120312165644_create_cities_vendors.rb",
+		"/Users/kontext/Desktop/deals/app/assets/javascripts/application.js",
+		"/Users/kontext/Desktop/deals/app/views/shared/_categories.html.erb",
+		"/Users/kontext/Desktop/deals/config/application.rb",
+		"/Users/kontext/Desktop/deals/app/assets/javascripts/bootstrap-dropdown.js",
+		"/Users/kontext/Desktop/deals/app/assets/stylesheets/bootstrap_and_overrides.css.less_",
+		"/Users/kontext/Desktop/deals/app/views/offers/index.html.erb",
+		"/Users/kontext/Desktop/deals/spec/models/category_spec.rb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_categories.html.erb",
+		"/Users/kontext/Desktop/deals/db/migrate/20120309141240_add_category_id_to_offers.rb",
+		"/Users/kontext/Desktop/deals/app/views/offers/_offer.html.haml",
+		"/Users/kontext/Desktop/deals/app/views/shared/_active_vendors.html.erb",
+		"/Users/kontext/Desktop/deals/db/migrate/20120307190930_add_dates_to_offers.rb",
+		"/Users/kontext/Desktop/deals/log/development.log",
+		"/Users/kontext/Desktop/deals/app/views/main/latest.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/vendors/index.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/shared/_navbar.html.haml",
+		"/Users/kontext/Desktop/deals/app/views/main/home.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/shared/_error_messages.html.erb",
+		"/Users/kontext/Desktop/deals/app/controllers/admin/sessions_controller.rb",
+		"/Users/kontext/Desktop/deals/app/views/admin/shared/_flash.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/_navigation.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/admin/shared/_navigation.html.erb",
+		"/Users/kontext/Desktop/deals/app/views/layouts/_admin_navigation.html.erb",
+		"/Users/kontext/Library/Application Support/Sublime Text 2/Packages/User/Plain text.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"category",
+			"@offers",
+			"@city",
+			"if",
+			"      @",
+			"  def",
+			"@city",
+			"end",
+			"   end",
+			"find_by",
+			"find_by_username",
+			"vendor_path",
+			"city_path",
+			"path",
+			"<br />",
+			".png",
+			"gif",
+			"hover",
+			"black",
+			"white",
+			"price_formatted",
+			"middle",
+			"initial_city",
+			"table",
+			"paletteLightBlue",
+			"@normalBlue",
+			"@blueDark",
+			"row-fluid",
+			"@offer",
+			"stored_city",
+			".pdf\"",
+			"beige",
+			"vendor",
+			"@blueDarker",
+			"beige",
+			"all_vendors",
+			"$",
+			"reset_vendor",
+			"reset_sessions",
+			"current_city_name",
+			"current_city_nam",
+			"current_city_name",
+			"selected_",
+			"selected",
+			"selectedÎ_city",
+			"selected_",
+			"selected_city",
+			"vendor_selected?",
+			"city_selected?",
+			"18px",
+			"active_category?",
+			"all_categories",
+			"all_cities",
+			"all_vendors",
+			"session[:city]",
+			"active_vendor_item",
+			"session[:",
+			"?c",
+			"@",
+			"find_by_username",
+			"project",
+			"programmer",
+			"assignments",
+			"row-fluid",
+			"expires_at",
+			"starts_at",
+			"expirs_at",
+			"expirs",
+			"<div >",
+			"style=\"font-size: 12pt\"",
+			"κωνσταντινιδ",
+			"ριζοσ",
+			"class=\"Apple-style-span\"",
+			"align=\"justify\"",
+			"font-size: 10pt",
+			"font-family: arial, helvetica, sans-serif",
+			"font-size: 10pt",
+			".error",
+			".alert-success",
+			".alert-error",
+			"new/",
+			"/new",
+			"home",
+			"CIR",
+			"lafabbrica",
+			"MAJORCA",
+			"SERENISSIMA",
+			"mpanio/plakakia",
+			"SERENISSIMA",
+			"MAJORCA",
+			"SERENISSIMA",
+			"LAFABBRICA",
+			"CIR",
+			"sidebar",
+			"container",
+			"400",
+			"cbbox",
+			".cbBox",
+			"cbbox",
+			"xbbox",
+			"<hr />",
+			"[highlight]",
+			"[/highlight]",
+			"[highlight]",
+			".addtocart_button",
+			"Ευχαριστούμε",
+			"PO_LBL",
+			"Ευχαριστούμε για την"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"#000",
+			"#fff",
+			"format_price",
+			"row",
+			"offer",
+			"current_city",
+			".pdf\" target=\"_blank\"",
+			"@paletteDarkBlue",
+			"paletteBeige",
+			"@",
+			"$",
+			"category",
+			"vendor",
+			"offers",
+			"row",
+			"expires_on",
+			"starts_on",
+			"<div>",
+			"",
+			".success",
+			".error",
+			"CERCOM",
+			"CIR",
+			"LAFABBRICA",
+			"MAJORCA",
+			"dapedo",
+			"PROVENZA",
+			"SERENISSIMA",
+			"MAJORCA",
+			"SERENISSIMA",
+			"LAFABBRICA",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/kontext/Desktop/Ticketee/app/controllers/projects_controller.rb",
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/kontext/Desktop/Ticketee/app/views/projects/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 60,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<%= @project.name %>",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/kontext/Desktop/Ticketee/app/views/projects/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								77,
+								77
+							]
+						],
+						"settings":
+						{
+							"auto_name": "xe",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/kontext/Desktop/Ticketee/spec/integration/creating_projects_spec.rb",
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								621,
+								670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/kontext/Desktop/Ticketee/app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/kontext/Desktop/Ticketee/app/helpers/application_helper.rb",
+					"settings":
+					{
+						"buffer_size": 186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/kontext/Desktop/Ticketee/Gemfile",
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"show",
+				"app/views/offers/show.html.erb"
+			],
+			[
+				"show.",
+				"app/views/offers/show.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"sessions",
+				"app/controllers/admin/sessions_controller.rb"
+			],
+			[
+				"vendor",
+				"app/models/vendor.rb"
+			],
+			[
+				"",
+				"/private/var/folders/qr/krb64q_92qzds5_mc2jmvfjm0000gn/T/fz3temp-1/greek.php"
+			],
+			[
+				"comment",
+				"app/models/comment.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true
+}

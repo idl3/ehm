@@ -17,4 +17,8 @@ module OfferHelper
       raw price + '<span class="smaller>€</span>'
     end
   end
+
+  def discount(discount)
+    discount.to_s + '%'
+  end
 end

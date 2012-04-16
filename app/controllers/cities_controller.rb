@@ -11,7 +11,6 @@ class CitiesController < ApplicationController
     else
       @offers = @city.offers.active.paginate(page: params[:page])
     end
-
   end
 
   protected

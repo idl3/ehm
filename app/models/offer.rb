@@ -19,4 +19,8 @@ class Offer < ActiveRecord::Base
   # some more scopes
 
   self.per_page = 12
+
+  before_save do |offer|
+    offer.discount = ((offer.initial_price - offer.price) / offer.initial_price) * 100
+  end
 end
