@@ -14,8 +14,7 @@ Deals::Application.routes.draw do
     match '/settings',    to:     'Vendors#edit'
 
     resources :offers
-    resources :vendors,   only: [:edit, :show, :update]
     resources :sessions,  only: [:new, :create, :destroy]
+    # resources :vendors,   only: [:edit, :show, :update]
   end
-
 end
