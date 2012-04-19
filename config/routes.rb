@@ -1,12 +1,12 @@
 Deals::Application.routes.draw do
-  root to: "Cities#show"
+  root to: 'Cities#show'
 
   match '/welcome'        =>      'Welcome#home'
   match '/admin'          =>      'Admin::Pages#index'
 
-  resources :cities,      path: '/',    only: :show
-  resources :vendors,     path: 'v',    only: :show
-  resources :offers,                    only: :show
+  resources :cities,      only: :show
+  resources :vendors,     only: :show
+  resources :offers,      only: :show
 
   namespace :admin do
     match '/login',       to:     'Sessions#new'
