@@ -10,11 +10,7 @@ class VendorsController < ApplicationController
     else
       @offers = @vendor.offers.active.paginate(:page => params[:page])
     end
-    store_vendor
-  end
-
-  private
-  def store_vendor
     session[:vendor_id] = @vendor.id
   end
+
 end
