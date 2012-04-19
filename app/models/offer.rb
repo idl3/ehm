@@ -4,15 +4,7 @@ class Offer < ActiveRecord::Base
   belongs_to :vendor
   belongs_to :category
 
-  has_attached_file :image,
-                    styles: { thumb: '150x150>', normal: '250x250>' },
-                    storage: :s3,
-                    bucket:  'shoply',
-                    s3_credentials: {
-                      access_key_id: 'AKIAJS5LXFFIXGEZFL3A',
-                      secret_access_key: '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'
-                    },
-                    s3_host_name: 's3-eu-west-1.amazonaws.com'
+  has_attached_file :image, styles: { thumb: '150x150>', normal: '250x250>' }
 
   validates :vendor_id, presence: true
   validates :category_id, presence: true
@@ -23,8 +15,8 @@ class Offer < ActiveRecord::Base
   validates :expires_on, presence: true, date: { after: :starts_on, message: "Must be after the starting date" }
 
   scope :active,   lambda { where("starts_on <= ? AND expires_on >= ?", Date.current, Date.current) }
-  scope :expiring, lambda { where("starts_on <= ? AND expires_on <= ?", Date.current, Date.tomorrow) }
-  # some more scopes
+  # scope :expiring, lambda { where("starts_on <= ? AND expires_on <= ?", Date.current, Date.tomorrow) }
+  # sure use scopes or DEFAULT SQL ORDERING?
 
   self.per_page = 12
 
