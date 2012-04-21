@@ -14,6 +14,7 @@ describe Offer do
   it { should respond_to :initial_price }
   it { should respond_to :starts_on }
   it { should respond_to :expires_on }
+  it { should respond_to :discount }
 
   its(:vendor) { should == vendor }
 

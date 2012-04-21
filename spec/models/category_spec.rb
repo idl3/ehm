@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Category do
-  before { @category = Category.new(title: "allantika xese") }
+  before { @category = Category.new(title: "Some category") }
 
   subject { @category }
 
@@ -12,5 +12,4 @@ describe Category do
     before { @category.title = " " }
     it { should_not be_valid }
   end
-
 end
