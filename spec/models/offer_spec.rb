@@ -80,4 +80,10 @@ describe Offer do
     before { @offer.expires_on = @offer.starts_on }
     it { should_not be_valid }
   end
+
+  # MISC
+
+  describe "discount value is calculated and saved"
+  before { @offer.save }
+  its(:discount) { should_not be_blank }
 end

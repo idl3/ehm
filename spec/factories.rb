@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :vendor do
     name     "A Supermarket"
     email    "michael@example.com"
+    username "some-supermarket"
     password "foobar"
     password_confirmation "foobar"
   end
