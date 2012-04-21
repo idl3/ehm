@@ -18,4 +18,9 @@ describe Category do
     before { @category.title = 'a' * 31 }
     it { should_not be_valid }
   end
+
+  describe "with very short title" do
+    before { @category.title = 'a' * 3 }
+    it { should_not be_valid }
+  end
 end
