@@ -13,7 +13,10 @@ describe Vendor do
   it { should respond_to :password_digest }
   it { should respond_to :password_confirmation }
   it { should respond_to :authenticate }
+
   it { should respond_to :offers }
+  it { should respond_to :cities }
+  it { should respond_to :categories }
 
   it { should be_valid }
 
