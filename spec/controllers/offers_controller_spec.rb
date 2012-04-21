@@ -1,12 +1,17 @@
+# # encoding: utf-8
 # require 'spec_helper'
 
 # describe OffersController do
+#   let!(:offer) { FactoryGirl.create(:offer) }
+#   let!(:city)   { FactoryGirl.create(:city) }
 
-#   it "should" do
-#     cookies[:city_id] = 2
-#     get :show
-#     response.should be_success
-#     response.should render_template 'show'
+
+#   describe "GET show" do
+#     it "assigns the city" do
+#       cookies[:city_id] = city.id
+#       get :show
+#       assigns(:offer).should eq([offer])
+#     end
 #   end
 
 # end
