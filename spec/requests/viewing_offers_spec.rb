@@ -2,8 +2,9 @@
 require 'spec_helper'
 
 feature "Viewing an offer" do
-  let!(:city) { FactoryGirl.create(:city) }
-  let!(:offer) { FactoryGirl.create(:offer) }
+  let!(:city)   { FactoryGirl.create(:city) }
+  let!(:vendor) { FactoryGirl.create(:vendor) }
+  let!(:offer)  { FactoryGirl.create(:offer, vendor: vendor) }
 
   subject { page }
 
@@ -15,7 +16,7 @@ feature "Viewing an offer" do
   end
 
   it "displays vendors name" do
-    should have_content offer.vendor.name
+    should have_content "από #{offer.vendor.name}"
   end
 
   it "displays offer title" do
@@ -40,7 +41,7 @@ feature "Viewing an offer" do
   end
 
   it "sets the vendor of the offer in the navbar" do
-    should have_css 'a.dropdown-toggle', text: 'offer.vendor.name'
+    should have_css 'a.dropdown-toggle', text: vendor.name
   end
 
   # should render more offers from vendor
