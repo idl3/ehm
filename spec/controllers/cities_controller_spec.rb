@@ -8,7 +8,7 @@ describe CitiesController do
       it "redirects to welcome path" do
         get :show
         response.should redirect_to welcome_path
-        assigns(:city).should eq nil
+        assigns(:city).should == nil
       end
     end
 
@@ -18,7 +18,7 @@ describe CitiesController do
         get :show
         response.should be_success
         response.should render_template 'show'
-        assigns(:city).should eq City.find(cookies[:city_id])
+        assigns(:city).should == City.find(cookies[:city_id])
       end
     end
 
