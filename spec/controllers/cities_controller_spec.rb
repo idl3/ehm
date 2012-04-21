@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe CitiesController do
-
   describe "GET show" do
+    let!(:city)   { FactoryGirl.create(:city) }
 
     describe "with city cookie NOT set" do
       it "redirects to welcome path" do
@@ -13,14 +13,16 @@ describe CitiesController do
     end
 
     describe "with city cookie set" do
-      it "lists all offers from stored city" do
-        cookies[:city_id] = 1
+      it "lists all offers from the selected city" do
+        cookies[:city_id] = city.id
         get :show
         response.should be_success
         response.should render_template 'show'
         assigns(:city).should eq City.find(cookies[:city_id])
       end
     end
+
+    # test for params?
 
   end
 end
