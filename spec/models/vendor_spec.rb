@@ -6,14 +6,14 @@ describe Vendor do
 
   subject { @vendor }
 
+  it { should respond_to :name }
+  it { should respond_to :username }
   it { should respond_to :email }
   it { should respond_to :password }
   it { should respond_to :password_digest }
   it { should respond_to :password_confirmation }
-  it { should respond_to :name }
-  it { should respond_to :username }
-  it { should respond_to :offers }
   it { should respond_to :authenticate }
+  it { should respond_to :offers }
 
   it { should be_valid }
 
@@ -43,7 +43,12 @@ describe Vendor do
   end
 
   describe "when name is too long" do
-    before { @vendor.name = "a" * 21 }
+    before { @vendor.name = 'a' * 21 }
+    it { should_not be_valid }
+  end
+
+  describe "when name is too short" do
+    before { @vendor.name = 'a' * 3 }
     it { should_not be_valid }
   end
 
