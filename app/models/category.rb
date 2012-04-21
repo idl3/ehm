@@ -3,5 +3,5 @@ class Category < ActiveRecord::Base
 
   has_many :offers
 
-  validates :title, presence: true
+  validates :title, presence: true, length: { maximum: 30 }
 end
