@@ -14,29 +14,33 @@ feature "Viewing an offer" do
     visit offer_path(offer)
   end
 
-  it "should display vendors name" do
+  it "displays vendors name" do
     should have_content offer.vendor.name
   end
 
-  it "should display offer title" do
+  it "displays offer title" do
     should have_selector 'h1', text: offer.title
   end
 
-  it "should display offer price and initial price" do
+  it "displays offer price and initial price" do
     should have_content price(offer.price)
     should have_content price(offer.initial_price)
   end
 
-  it "should display expiry date" do
+  it "displays expiry date" do
     should have_content expires(offer)
   end
 
-  it "should display discount value" do
+  it "displays discount value" do
     should have_content discount(offer)
   end
 
-  it "should display win value" do
+  it "displays win value" do
     should have_content win(offer)
+  end
+
+  it "sets the vendor of the offer in the navbar" do
+    should have_css 'a.dropdown-toggle', text: 'offer.vendor.name'
   end
 
   # should render more offers from vendor
