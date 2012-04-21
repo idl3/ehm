@@ -9,7 +9,7 @@ gem 'will_paginate', '~> 3.0'
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'factory_girl_rails', '1.4.0'
+  gem 'factory_girl_rails', '~> 3.0'
 end
 
 group :test, :development do
