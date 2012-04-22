@@ -5,7 +5,6 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
-
     if params[:c]
       @offers = @city.offers.active.where("category_id = #{params[:c]}").paginate(page: params[:page])
     else
@@ -16,12 +15,14 @@ class CitiesController < ApplicationController
   protected
   def set_cookie_and_params
     if params.has_key?(:selected_city) # then he's coming from the welcome page
+      params[:id]       = params[:selected_city][:id]
       cookies[:city_id] = params[:selected_city][:id]
-      params[:id] = params[:selected_city][:id]
-    elsif params.has_key?(:id) # then we dont have to set params[:id], it's already set
+      params[:selected_city][:id] = nil
+      params[:selected_city] = nil
+    elsif params.has_key?(:id)         # then we dont have to set params[:id], it's already set
       cookies[:city_id] = params[:id]
-    else # keep the param also to the homepage
-      params[:id] = cookies[:city_id] || 1
+    else                               # persist param[:id] also to the homepage
+      params[:id] = cookies[:city_id] || City.first.id
     end
   end
 end
