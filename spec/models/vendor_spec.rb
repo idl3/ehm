@@ -21,22 +21,22 @@ describe Vendor do
   it { should be_valid }
 
   describe "when name is not present" do
-    before { @vendor.name = " " }
+    before { @vendor.name = ' ' }
     it { should_not be_valid }
   end
 
   describe "when email is not present" do
-    before { @vendor.email = " " }
+    before { @vendor.email = ' ' }
     it { should_not be_valid }
   end
 
   describe "when username is not present" do
-    before { @vendor.username = " " }
+    before { @vendor.username = ' ' }
     it { should_not be_valid }
   end
 
   describe "when password is not present" do
-    before { @vendor.password = @vendor.password_confirmation = " " }
+    before { @vendor.password = @vendor.password_confirmation = ' ' }
     it { should_not be_valid }
   end
 
@@ -51,7 +51,7 @@ describe Vendor do
   end
 
   describe "when name is too short" do
-    before { @vendor.name = 'a' * 3 }
+    before { @vendor.name = 'a' * 2 }
     it { should_not be_valid }
   end
 
