@@ -6,7 +6,7 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     if params[:c]
-      @offers = @city.offers.active.where("category_id = #{params[:c]}").paginate(page: params[:page])
+      @offers = @city.offers.active.where("category_id = ?", params[:c]).paginate(page: params[:page])
     else
       @offers = @city.offers.active.paginate(page: params[:page])
     end
