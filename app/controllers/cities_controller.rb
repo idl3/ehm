@@ -17,8 +17,6 @@ class CitiesController < ApplicationController
     if params.has_key?(:selected_city) # then he's coming from the welcome page
       params[:id]       = params[:selected_city][:id]
       cookies[:city_id] = params[:selected_city][:id]
-      params[:selected_city][:id] = nil
-      params[:selected_city] = nil
     elsif params.has_key?(:id)         # then we dont have to set params[:id], it's already set
       cookies[:city_id] = params[:id]
     else                               # persist param[:id] also to the homepage

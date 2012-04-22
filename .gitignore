@@ -16,3 +16,4 @@
 /tmp/pids
 /tmp/sessions
 /tmp/sockets
+/tmp/pids/server.pid
