@@ -11,3 +11,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 .DS_Store
+
+/tmp/cache
+/tmp/pids
+/tmp/sessions
+/tmp/sockets
