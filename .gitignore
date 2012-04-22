@@ -11,4 +11,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 .DS_Store
-/tmp
